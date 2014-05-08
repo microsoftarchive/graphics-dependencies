@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{bfe5a437-9cd8-475c-9217-df1e00129631}</ProjectGuid>
+    <RootNamespace>freetype</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;FT2_BUILD_LIBRARY;_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>freetype-2.5.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;FT2_BUILD_LIBRARY;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>freetype-2.5.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;FT2_BUILD_LIBRARY;_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>freetype-2.5.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;FT2_BUILD_LIBRARY;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>freetype-2.5.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="Windows">
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\basepic.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftadvanc.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftbbox.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftcalc.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftrfork.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftstroke.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\fttrigon.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftutil.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cff\cffobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cid\cidgload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cid\cidobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cid\cidparse.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cid\cidriver.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pcf\pcfdrivr.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pcf\pcfread.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pcf\pcfutil.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pfr\pfrcmap.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pfr\pfrdrivr.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pfr\pfrgload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pfr\pfrload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pfr\pfrobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psaux\afmparse.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psaux\psauxmod.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psaux\psconv.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psaux\psobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psaux\t1cmap.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psaux\t1decode.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pshinter\pshalgo.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pshinter\pshglob.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pshinter\pshpic.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pshinter\pshrec.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\psnames\psmodule.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\raster\ftraster.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\raster\ftrend1.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\sfdriver.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\sfobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttbdf.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttcmap.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttmtx.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttpost.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttsbit.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\truetype\ttdriver.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\truetype\ttgload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\truetype\ttinterp.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\truetype\ttobjs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\truetype\ttpload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type1\t1afm.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type1\t1driver.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type1\t1gload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type1\t1load.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type1\t1objs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type1\t1parse.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type42\t42drivr.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type42\t42objs.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\type42\t42parse.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\winfonts\winfnt.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\autofit\autofit.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftbitmap.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftfstype.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftgasp.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftgloadr.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftglyph.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftinit.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftoutln.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftstream.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\base\ftsystem.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\bdf\bdf.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cache\ftccache.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cff\cff.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\cid\cidload.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\gzip\ftgzip.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\lzw\ftlzw.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pfr\pfrsbit.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\pshinter\pshmod.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\raster\rastpic.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\sfnt\ttkern.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\smooth\smooth.c" />
+    <ClCompile Include=".\freetype-2.5.0.1\src\truetype\ttgxvar.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
