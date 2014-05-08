@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "freetype", "freetype", "{6E76CE8F-107B-41D7-89AA-09BADFB0043E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype.Shared", "freetype\freetype.Shared\freetype.Shared.vcxitems", "{363762BD-9F43-431A-B0E4-E21C247CC775}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype.Windows", "freetype\freetype.Windows\freetype.Windows.vcxproj", "{D0D285EE-1D72-48D3-AC35-1A31C8084199}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype.WindowsPhone", "freetype\freetype.WindowsPhone\freetype.WindowsPhone.vcxproj", "{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		freetype\freetype.Shared\freetype.Shared.vcxitems*{d0d285ee-1d72-48d3-ac35-1a31c8084199}*SharedItemsImports = 4
+		freetype\freetype.Shared\freetype.Shared.vcxitems*{cc4d2484-dee0-4b3e-9cf5-087c1db67298}*SharedItemsImports = 4
+		freetype\freetype.Shared\freetype.Shared.vcxitems*{363762bd-9f43-431a-b0e4-e21c247cc775}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Debug|ARM.Build.0 = Debug|ARM
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Debug|Win32.Build.0 = Debug|Win32
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Debug|x64.ActiveCfg = Debug|x64
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Debug|x64.Build.0 = Debug|x64
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Release|ARM.ActiveCfg = Release|ARM
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Release|ARM.Build.0 = Release|ARM
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Release|Win32.ActiveCfg = Release|Win32
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Release|Win32.Build.0 = Release|Win32
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Release|x64.ActiveCfg = Release|x64
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199}.Release|x64.Build.0 = Release|x64
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Debug|ARM.Build.0 = Debug|ARM
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Debug|Win32.Build.0 = Debug|Win32
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Debug|x64.ActiveCfg = Debug|Win32
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Release|ARM.ActiveCfg = Release|ARM
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Release|ARM.Build.0 = Release|ARM
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Release|Win32.ActiveCfg = Release|Win32
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Release|Win32.Build.0 = Release|Win32
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{363762BD-9F43-431A-B0E4-E21C247CC775} = {6E76CE8F-107B-41D7-89AA-09BADFB0043E}
+		{D0D285EE-1D72-48D3-AC35-1A31C8084199} = {6E76CE8F-107B-41D7-89AA-09BADFB0043E}
+		{CC4D2484-DEE0-4B3E-9CF5-087C1DB67298} = {6E76CE8F-107B-41D7-89AA-09BADFB0043E}
+	EndGlobalSection
+EndGlobal

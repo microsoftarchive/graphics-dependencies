@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{363762bd-9f43-431a-b0e4-e21c247cc775}</ItemsProjectGuid>
+    <ItemsRootNamespace>freetype</ItemsRootNamespace>
+    <ItemsProjectName>freetype.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\autofit\autofit.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\basepic.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftadvanc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftbbox.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftbitmap.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftcalc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftfstype.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftgasp.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftgloadr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftglyph.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftinit.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftoutln.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftrfork.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftstream.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftstroke.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftsystem.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\fttrigon.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\base\ftutil.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\bdf\bdf.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cache\ftcache.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cff\cff.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cff\cffobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cid\cidgload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cid\cidload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cid\cidobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cid\cidparse.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\cid\cidriver.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\gzip\ftgzip.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\lzw\ftlzw.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pcf\pcfdrivr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pcf\pcfread.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pcf\pcfutil.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pfr\pfrcmap.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pfr\pfrdrivr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pfr\pfrgload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pfr\pfrload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pfr\pfrobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pfr\pfrsbit.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psaux\afmparse.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psaux\psauxmod.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psaux\psconv.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psaux\psobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psaux\t1cmap.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psaux\t1decode.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pshinter\pshalgo.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pshinter\pshglob.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pshinter\pshmod.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pshinter\pshpic.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\pshinter\pshrec.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\psnames\psmodule.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\raster\ftraster.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\raster\ftrend1.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\raster\rastpic.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\sfdriver.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\sfobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttbdf.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttcmap.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttkern.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttmtx.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttpost.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\sfnt\ttsbit.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\smooth\smooth.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\truetype\ttdriver.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\truetype\ttgload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\truetype\ttgxvar.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\truetype\ttinterp.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\truetype\ttobjs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\truetype\ttpload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type1\t1afm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type1\t1driver.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type1\t1gload.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type1\t1load.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type1\t1objs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type1\t1parse.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type42\t42drivr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type42\t42objs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\type42\t42parse.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\freetype-2.5.0.1\src\winfonts\winfnt.c" />
+  </ItemGroup>
+</Project>
