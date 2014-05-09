@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jaricom.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcapimin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcapistd.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcarith.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jccoefct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jccolor.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcdctmgr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jchuff.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcinit.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcmainct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcmarker.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcmaster.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcomapi.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcparam.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcprepct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jcsample.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jctrans.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdapimin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdapistd.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdarith.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdatadst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdatasrc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdcoefct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdcolor.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jddctmgr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdhuff.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdinput.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdmainct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdmarker.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdmaster.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdmerge.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdpostct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdsample.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jdtrans.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jerror.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jfdctflt.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jfdctfst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jfdctint.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jidctflt.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jidctfst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jidctint.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jmemmgr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jmemnobs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jquant1.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jquant2.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jutils.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\transupp.c" />
+  </ItemGroup>
+</Project>
