@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rtaudio", "rtaudio", "{E1D15F8B-9BCC-469B-B0A5-74FC261E0A60}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rtaudio.Shared", "rtaudio\rtaudio.Shared\rtaudio.Shared.vcxitems", "{E9996165-25A9-462C-812B-D2FD768AC2DA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rtaudio.Windows", "rtaudio\rtaudio.Windows\rtaudio.Windows.vcxproj", "{D57C7313-A49D-40D8-92ED-E00360A6F23A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rtaudio.WindowsPhone", "rtaudio\rtaudio.WindowsPhone\rtaudio.WindowsPhone.vcxproj", "{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		rtaudio\rtaudio.Shared\rtaudio.Shared.vcxitems*{a2ecf1f1-d1c9-4367-911d-ff0b8a86e55e}*SharedItemsImports = 4
+		rtaudio\rtaudio.Shared\rtaudio.Shared.vcxitems*{d57c7313-a49d-40d8-92ed-e00360a6f23a}*SharedItemsImports = 4
+		rtaudio\rtaudio.Shared\rtaudio.Shared.vcxitems*{e9996165-25a9-462c-812b-d2fd768ac2da}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Debug|ARM.Build.0 = Debug|ARM
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Debug|Win32.Build.0 = Debug|Win32
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Debug|x64.ActiveCfg = Debug|x64
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Debug|x64.Build.0 = Debug|x64
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Release|ARM.ActiveCfg = Release|ARM
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Release|ARM.Build.0 = Release|ARM
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Release|Win32.ActiveCfg = Release|Win32
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Release|Win32.Build.0 = Release|Win32
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Release|x64.ActiveCfg = Release|x64
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A}.Release|x64.Build.0 = Release|x64
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Debug|ARM.Build.0 = Debug|ARM
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Debug|Win32.Build.0 = Debug|Win32
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Debug|x64.ActiveCfg = Debug|Win32
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Release|ARM.ActiveCfg = Release|ARM
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Release|ARM.Build.0 = Release|ARM
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Release|Win32.ActiveCfg = Release|Win32
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Release|Win32.Build.0 = Release|Win32
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9996165-25A9-462C-812B-D2FD768AC2DA} = {E1D15F8B-9BCC-469B-B0A5-74FC261E0A60}
+		{D57C7313-A49D-40D8-92ED-E00360A6F23A} = {E1D15F8B-9BCC-469B-B0A5-74FC261E0A60}
+		{A2ECF1F1-D1C9-4367-911D-FF0B8A86E55E} = {E1D15F8B-9BCC-469B-B0A5-74FC261E0A60}
+	EndGlobalSection
+EndGlobal

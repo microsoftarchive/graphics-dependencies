@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a8a189fe-8093-4169-a23b-127e61cdc63b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\LayoutAwarePage.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\suspensionmanager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\Constants.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\MFSampleGenerator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\pch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\ToneSampleGenerator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\WASAPICapture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\WASAPIRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\RtAudio.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\LayoutAwarePage.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\suspensionmanager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\Common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\Constants.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\DeviceState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\MFSampleGenerator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\PlotData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\ToneSampleGenerator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\WASAPICapture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\WASAPIRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\RtAudio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\RtError.h" />
+  </ItemGroup>
+</Project>
