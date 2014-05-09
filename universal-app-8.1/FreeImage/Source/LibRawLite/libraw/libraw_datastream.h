@@ -173,7 +173,7 @@ class DllDef LibRaw_bigfile_datastream : public LibRaw_abstract_datastream
     const char *filename;
 };
 
-#ifdef WIN32
+#if defined(WIN32) && !defined(WP8)
 class DllDef  LibRaw_windows_datastream : public LibRaw_buffer_datastream 
 {
 public:
