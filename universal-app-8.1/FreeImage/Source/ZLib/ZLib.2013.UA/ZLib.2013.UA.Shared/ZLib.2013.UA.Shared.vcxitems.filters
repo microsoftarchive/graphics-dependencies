@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\adler32.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\compress.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\crc32.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\deflate.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\gzclose.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\gzlib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\gzread.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\gzwrite.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\infback.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\inffast.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\inflate.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\inftrees.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\trees.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\uncompr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\zutil.c" />
+  </ItemGroup>
+</Project>
