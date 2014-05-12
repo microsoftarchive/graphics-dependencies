@@ -16,7 +16,7 @@ nuget {
 		description: @"Cocos2dx Image Libraries for WP8";
 		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
 		copyright: Copyright 2014;
-		tags: { Cocos2d, Graphics-Dependencies, JPEG,JPG, libjpeg, arm, Win32, WP8 };
+		tags: { Cocos2d, Graphics-Dependencies, FREETYPE, JPEG,JPG, PNG, TIFF, ZLIB, arm, Win32, WP8 };
 	};
 
 	// the files that go into the content folders
@@ -24,9 +24,12 @@ nuget {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
-			GDPATH   =  windows-phone-8.0\prebuilt;
-			LIBJPEG   =  libjpeg.lib;
-			
+			GDPATH        =  windows-phone-8.0\prebuilt;
+			LIBFREETYPE   =  freetype.lib;
+			LIBJPEG	      =  libjpeg.lib;
+			LIBPNG        =  libpng.lib;
+			LIBTIFF       =  libtiff.lib;
+			LIBZ	      =	 zlib.lib;
 		}
 	
 		// grab all the files in the include folder
@@ -41,7 +44,11 @@ nuget {
 		{
 			lib: 
 			{
+				${GDPATH}\Release\Win32\${LIBFREETYPE};
 				${GDPATH}\Release\Win32\${LIBJPEG};
+				${GDPATH}\Release\Win32\${LIBPNG};
+				${GDPATH}\Release\Win32\${LIBTIFF};
+				${GDPATH}\Release\Win32\${LIBZ};
 			}
 		}
 		
@@ -49,7 +56,11 @@ nuget {
 		{
 			lib: 
 			{
+				${GDPATH}\Release\ARM\${LIBFREETYPE};
 				${GDPATH}\Release\ARM\${LIBJPEG};
+				${GDPATH}\Release\ARM\${LIBPNG};
+				${GDPATH}\Release\ARM\${LIBTIFF};
+				${GDPATH}\Release\ARM\${LIBZ};
 			}
 		}
 	};
