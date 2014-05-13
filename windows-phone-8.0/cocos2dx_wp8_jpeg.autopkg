@@ -1,10 +1,10 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8_tiff;
-		version : 0.0.0.1;
+		id = cocos2dx_wp8_jpeg;
+		version : 0.0.0.3;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
-		owners: {Cocos2Dx, Graphics-Dependencies, libtiff, Dale Stammen, Neil McLaughlin};
+		owners: {Cocos2Dx, Graphics-Dependencies, libjpeg, Dale Stammen, Neil McLaughlin};
 		licenseUrl: "http://www.microsoft.com";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
 		// TODO - set iconUrl
@@ -16,7 +16,7 @@ nuget {
 		description: @"Cocos2dx Image Libraries for WP8";
 		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
 		copyright: Copyright 2014;
-		tags: { Native, Cocos2d, Graphics-Dependencies, TIFF, arm, Win32, WP8 };
+		tags: { Native, Cocos2d, Graphics-Dependencies, JPEG,JPG, arm, Win32, WP8 };
 	};
 
 
@@ -26,14 +26,14 @@ nuget {
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
 			GDPATH        =  .\prebuilt;
-			LIBTIFF	      =  libtiff.lib;
+			LIBJPEG	      =  libjpeg.lib;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\libtiff\*";
+		 	include: { ".\${GDPATH}\include\libjpeg\*";
 					
 		};					
 					
@@ -41,7 +41,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBTIFF};
+				${GDPATH}\Debug\Win32\${LIBJPEG};
 			}
 		}
 		
@@ -49,7 +49,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBTIFF};
+				${GDPATH}\Debug\ARM\${LIBJPEG};
 			}
 		}
 	
@@ -57,7 +57,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBTIFF};
+				${GDPATH}\Release\Win32\${LIBJPEG};
 			}
 		}
 		
@@ -65,13 +65,13 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBTIFF};
+				${GDPATH}\Release\ARM\${LIBJPEG};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRTIFFDEPLIB;
+		Defines += HAS_GRJPEGDEPLIB;
 	};
 }

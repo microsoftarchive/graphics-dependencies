@@ -1,10 +1,10 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8__png;
+		id = cocos2dx_wp8_png;
 		version : 0.0.0.1;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
-		owners: {Cocos2Dx, Graphics-Dependencies, libjpeg, Dale Stammen, Neil McLaughlin};
+		owners: {Cocos2Dx, Graphics-Dependencies, libpng, Dale Stammen, Neil McLaughlin};
 		licenseUrl: "http://www.microsoft.com";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
 		// TODO - set iconUrl
@@ -18,6 +18,7 @@ nuget {
 		copyright: Copyright 2014;
 		tags: { Native, Cocos2d, Graphics-Dependencies, PNG, arm, Win32, WP8 };
 	};
+
 
 	// the files that go into the content folders
 		files {
