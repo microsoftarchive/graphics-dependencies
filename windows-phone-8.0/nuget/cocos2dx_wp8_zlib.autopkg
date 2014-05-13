@@ -1,22 +1,21 @@
 nuget {
 	nuspec {
 		id = cocos2dx_wp8_zlib;
-		version : 0.0.0.1;
+		version : 0.0.0.2;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
-		authors: {Microsoft Corporation};
-		owners: {Cocos2Dx, Graphics-Dependencies, zlib, Dale Stammen, Neil McLaughlin};
-		licenseUrl: "http://www.microsoft.com";
-		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
-		// TODO - set iconUrl
-		iconUrl: "https://download-codeplex.sec.s-msft.com/Download?ProjectName=casablanca&DownloadId=630102&Build=20425";
+		authors: {Microsoft Open Technologies, Inc.};
+		owners: {Microsoft Open Technologies, Inc.};
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/zlib/zlib-8b/README";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";		 
+		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
 		requireLicenseAcceptance:false;
-		summary: Installer for Windows Phone 8 version of the Cocos2dx Graphics Depedencies libs and dlls;
+		summary: Installer for Windows Phone 8 version of zlib;
 		
 		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
-		description: @"Cocos2dx Image Libraries for WP8";
-		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
-		copyright: Copyright 2014;
-		tags: { Native, Cocos2d, Graphics-Dependencies, ZLIB, arm, Win32, WP8 };
+		description: @"Cocos2dx Image Libraries for WP8 zlib";
+		releaseNotes: "Release of zlib for Cocos2dx for WP8 (Visual Studio 2012, VC11, v110).";
+		copyright: Copyright © Microsoft Open Technologies, Inc.
+		tags: {zlib zlib WP8 Windows Phone native nativepackage};
 	};
 	// the files that go into the content folders
 		files {
@@ -24,14 +23,14 @@ nuget {
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
 			GDPATH        =  ..\prebuilt;
-			LIBZLIB	      =  zlib.lib;
+			zlib	      =  zlib.lib;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\zlib\*";
+		 	include: { ".\${GDPATH}\include\zlib\**\*";
 					
 		};					
 					
@@ -39,7 +38,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBZLIB};
+				${GDPATH}\Debug\Win32\${zlib};
 			}
 		}
 		
@@ -47,7 +46,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBZLIB};
+				${GDPATH}\Debug\ARM\${zlib};
 			}
 		}
 	
@@ -55,7 +54,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBZLIB};
+				${GDPATH}\Release\Win32\${zlib};
 			}
 		}
 		
@@ -63,7 +62,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBZLIB};
+				${GDPATH}\Release\ARM\${zlib};
 			}
 		}
 	};
