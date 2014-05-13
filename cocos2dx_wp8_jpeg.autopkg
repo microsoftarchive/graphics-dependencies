@@ -1,7 +1,7 @@
 nuget {
 	nuspec {
 		id = cocos2dx_wp8_jpeg;
-		version : 0.0.0.1;
+		version : 0.0.0.2;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
 		owners: {Cocos2Dx, Graphics-Dependencies, libjpeg, Dale Stammen, Neil McLaughlin};
@@ -32,11 +32,27 @@ nuget {
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - include 3rd party headers?
-		 	include: { ".\${GDPATH}\include\**\*";
+		 	include: { ".\${GDPATH}\include\libjpeg\**\*";
 					
 		};					
 					
-		[x86,v110,release] 
+		[win32,v110,debug] 
+		{
+			lib: 
+			{		
+				${GDPATH}\Debug\Win32\${LIBJPEG};
+			}
+		}
+		
+		[arm,v110,debug] 
+		{
+			lib: 
+			{
+				${GDPATH}\Debug\ARM\${LIBJPEG};
+			}
+		}
+	
+		[win32,v110,release] 
 		{
 			lib: 
 			{		
@@ -55,6 +71,6 @@ nuget {
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRDEPLIB;
+		Defines += HAS_GRJDEPLIB;
 	};
 }
