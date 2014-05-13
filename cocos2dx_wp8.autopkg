@@ -1,7 +1,7 @@
 nuget {
 	nuspec {
 		id = cocos2dx_wp8;
-		version : 1.0.0.0;
+		version : 1.0.0.1;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
 		owners: {Cocos2Dx, Graphics-Dependencies, libjpeg, Dale Stammen, Neil McLaughlin};
@@ -30,13 +30,17 @@ nuget {
 			LIBPNG        =  libpng.lib;
 			LIBTIFF       =  libtiff.lib;
 			LIBZ	      =	 zlib.lib;
+			LIBCURL	      =	 libcurl.dll;
+			LIBEAY32      =	 libeay32.dll;
+			LIBWEBSOCKETS =	 libwebsockets.dll;
+			LIBWEBSOCKETSL=	 libwebsockets.lib;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - include 3rd party headers?
-		 	include: { ".\NuGetPackage\**";
+		 	include: { ".\windows-phone-8.0\prebuilt\include\**";
 					
 		};					
 					
@@ -49,6 +53,10 @@ nuget {
 				${GDPATH}\Release\Win32\${LIBPNG};
 				${GDPATH}\Release\Win32\${LIBTIFF};
 				${GDPATH}\Release\Win32\${LIBZ};
+				${GDPATH}\Release\Win32\${LIBCURL};
+				${GDPATH}\Release\Win32\${LIBEAY32};
+				${GDPATH}\Release\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Release\Win32\${LIBWEBSOCKETSL};
 			}
 		}
 		
@@ -61,6 +69,10 @@ nuget {
 				${GDPATH}\Release\ARM\${LIBPNG};
 				${GDPATH}\Release\ARM\${LIBTIFF};
 				${GDPATH}\Release\ARM\${LIBZ};
+				${GDPATH}\Release\ARM\${LIBCURL};
+				${GDPATH}\Release\ARM\${LIBEAY32};
+				${GDPATH}\Release\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Release\ARM\${LIBWEBSOCKETSL};
 			}
 		}
 	};
