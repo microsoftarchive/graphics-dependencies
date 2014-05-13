@@ -1,37 +1,36 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8_freetype;
-		version : 0.0.0.2;
-		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
+		id = image_wp8_zlib;
+		version : 0.0.0.1;
+		title: Image Libraries for Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Open Technologies, Inc.};
 		owners: {Microsoft Open Technologies, Inc.};
-		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/libfreetype/freetype-8b/README";
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/zlib/zlib-8b/README";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";		 
 		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
 		requireLicenseAcceptance:false;
-		summary: Installer for Windows Phone 8 version of libfreetype;
+		summary: Installer for Windows Phone 8 version of zlib;
 		
 		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
-		description: @"Cocos2dx Image Libraries for WP8 freetype";
-		releaseNotes: "Release of libfreetype for Cocos2dx for WP8 (Visual Studio 2012, VC11, v110).";
+		description: @"Image Libraries for WP8 zlib";
+		releaseNotes: "Release of zlib for image for WP8 (Visual Studio 2012, VC11, v110).";
 		copyright: Copyright © Microsoft Open Technologies, Inc.
-		tags: {freetype libfreetype WP8 Windows Phone native nativepackage};
+		tags: {zlib zlib WP8 Windows Phone native nativepackage};
 	};
-
 	// the files that go into the content folders
 		files {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
-					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
+					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage image_wp8.autopkg
 			GDPATH        =  ..\prebuilt;
-			LIBFREETYPE	      =  freetype.lib;
+			zlib	      =  zlib.lib;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\freetype\**\*";
+		 	include: { ".\${GDPATH}\include\zlib\**\*";
 					
 		};					
 					
@@ -39,7 +38,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBFREETYPE};
+				${GDPATH}\Debug\Win32\${zlib};
 			}
 		}
 		
@@ -47,7 +46,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBFREETYPE};
+				${GDPATH}\Debug\ARM\${zlib};
 			}
 		}
 	
@@ -55,7 +54,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBFREETYPE};
+				${GDPATH}\Release\Win32\${zlib};
 			}
 		}
 		
@@ -63,13 +62,13 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBFREETYPE};
+				${GDPATH}\Release\ARM\${zlib};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRFREETYPEDEPLIB;
+		Defines += HAS_GRZLIBDEPLIB;
 	};
 }

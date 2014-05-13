@@ -1,36 +1,37 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8_zlib;
-		version : 0.0.0.2;
-		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
+		id = image_wp8_eay32;
+		version : 0.0.0.1;
+		title: Image Libraries for Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Open Technologies, Inc.};
 		owners: {Microsoft Open Technologies, Inc.};
-		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/zlib/zlib-8b/README";
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/libeay32/eay32-8b/README";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";		 
 		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
 		requireLicenseAcceptance:false;
-		summary: Installer for Windows Phone 8 version of zlib;
+		summary: Installer for Windows Phone 8 version of libeay32;
 		
 		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
-		description: @"Cocos2dx Image Libraries for WP8 zlib";
-		releaseNotes: "Release of zlib for Cocos2dx for WP8 (Visual Studio 2012, VC11, v110).";
+		description: @"Image Libraries for WP8 eay32";
+		releaseNotes: "Release of libeay32 for image for WP8 (Visual Studio 2012, VC11, v110).";
 		copyright: Copyright © Microsoft Open Technologies, Inc.
-		tags: {zlib zlib WP8 Windows Phone native nativepackage};
-	};
-	// the files that go into the content folders
+		tags: {eay32 libeay32 WP8 Windows Phone native nativepackage};
+	};	// the files that go into the content folders
 		files {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
-					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
+					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage image_wp8.autopkg
 			GDPATH        =  ..\prebuilt;
-			zlib	      =  zlib.lib;
+			LIBEAY32      =  libeay32.dll;
+			LIBCURL	      =  libcurl32.dll;
+			// TODO - LIBCURL =  ssleay.dll; 
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\zlib\**\*";
+		 	include: { ".\${GDPATH}\include\libeay32\**\*";
 					
 		};					
 					
@@ -38,7 +39,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${zlib};
+				${GDPATH}\Debug\Win32\${LIBEAY32};
 			}
 		}
 		
@@ -46,7 +47,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${zlib};
+				${GDPATH}\Debug\ARM\${LIBEAY32};
 			}
 		}
 	
@@ -54,7 +55,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${zlib};
+				${GDPATH}\Release\Win32\${LIBEAY32};
 			}
 		}
 		
@@ -62,13 +63,13 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${zlib};
+				${GDPATH}\Release\ARM\${LIBEAY32};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRZLIBDEPLIB;
+		Defines += HAS_GREAY32DEPLIB;
 	};
 }
