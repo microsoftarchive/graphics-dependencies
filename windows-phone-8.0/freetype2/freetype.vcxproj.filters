@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include=".\include\freetype\config\ftconfig.h" />
-    <ClInclude Include=".\include\freetype\config\ftheader.h" />
-    <ClInclude Include=".\include\freetype\config\ftmodule.h" />
-    <ClInclude Include=".\include\freetype\config\ftoption.h" />
-    <ClInclude Include=".\include\freetype\config\ftstdlib.h" />
-    <ClInclude Include=".\include\ft2build.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include=".\freetype-2.5.0.1\src\base\basepic.c" />
     <ClCompile Include=".\freetype-2.5.0.1\src\base\ftadvanc.c" />
     <ClCompile Include=".\freetype-2.5.0.1\src\base\ftbbox.c" />

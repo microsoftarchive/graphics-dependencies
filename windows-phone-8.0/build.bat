@@ -56,6 +56,10 @@ cd ..\libtiff
 call .\include.bat
 cd ..\freetype2
 call .\include.bat
+cd ..\libwebsockets
+call .\include.bat
+cd ..\libcurl-winrt
+call .\include.bat
 cd ..\
 
 

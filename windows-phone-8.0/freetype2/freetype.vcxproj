@@ -56,19 +56,19 @@
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>$(ProjectDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>$(ProjectDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>$(ProjectDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>$(ProjectDir)..\prebuilt\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -154,7 +154,6 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
-
   <ItemGroup>
     <ClCompile Include=".\freetype-2.5.0.1\src\base\basepic.c" />
     <ClCompile Include=".\freetype-2.5.0.1\src\base\ftadvanc.c" />
