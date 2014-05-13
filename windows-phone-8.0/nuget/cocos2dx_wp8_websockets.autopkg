@@ -1,10 +1,10 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8_png;
+		id = cocos2dx_wp8_websockets;
 		version : 0.0.0.1;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
-		owners: {Cocos2Dx, Graphics-Dependencies, libpng, Dale Stammen, Neil McLaughlin};
+		owners: {Cocos2Dx, Graphics-Dependencies, libwebsockets, Dale Stammen, Neil McLaughlin};
 		licenseUrl: "http://www.microsoft.com";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
 		// TODO - set iconUrl
@@ -16,24 +16,24 @@ nuget {
 		description: @"Cocos2dx Image Libraries for WP8";
 		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
 		copyright: Copyright 2014;
-		tags: { Native, Cocos2d, Graphics-Dependencies, PNG, arm, Win32, WP8 };
+		tags: { Native, Cocos2d, Graphics-Dependencies, WEBSOCKETS, arm, Win32, WP8 };
 	};
-
 
 	// the files that go into the content folders
 		files {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
-			GDPATH        =  .\prebuilt;
-			LIBPNG	      =  libpng.lib;
+			GDPATH        =  ..\prebuilt;
+			LIBWEBSOCKETS	      =  libwebsockets.lib;
+			DLLWEBSOCKETS		  =  libwebsockets.dll;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
-		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\libpng\*";
+		// TODO - include 3rd party headers?
+		 	include: { ".\${GDPATH}\include\libwebsockets\**\*";
 					
 		};					
 					
@@ -41,7 +41,8 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBPNG};
+				${GDPATH}\Debug\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Debug\Win32\${DLLWEBSOCKETS};
 			}
 		}
 		
@@ -49,7 +50,8 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBPNG};
+				${GDPATH}\Debug\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Debug\ARM\${DLLWEBSOCKETS};
 			}
 		}
 	
@@ -57,7 +59,8 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBPNG};
+				${GDPATH}\Release\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Release\Win32\${DLLWEBSOCKETS};
 			}
 		}
 		
@@ -65,13 +68,14 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBPNG};
+				${GDPATH}\Release\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Release\ARM\${DLLWEBSOCKETS};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRPNGDEPLIB;
+		Defines += HAS_GRWSDEPLIB;
 	};
 }

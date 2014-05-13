@@ -18,21 +18,22 @@ nuget {
 		copyright: Copyright 2014;
 		tags: { Native, Cocos2d, Graphics-Dependencies, WEBSOCKETS, arm, Win32, WP8 };
 	};
+
 	// the files that go into the content folders
 		files {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
-			GDPATH        =  .\prebuilt;
-			LIBWEBSOCKETS	      =  libwebsockets.dll;
-			LIBWEBSOCKETSL	      =  libwebsockets.lib;
+			GDPATH        =  ..\prebuilt;
+			LIBWEBSOCKETS	      =  libwebsockets.lib;
+			DLLWEBSOCKETS		  =  libwebsockets.dll;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
-		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\libwebsockets\*";
+		// TODO - include 3rd party headers?
+		 	include: { ".\${GDPATH}\include\libwebsockets\**\*";
 					
 		};					
 					
@@ -40,8 +41,8 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBWEBSOCKETSL};
 				${GDPATH}\Debug\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Debug\Win32\${DLLWEBSOCKETS};
 			}
 		}
 		
@@ -49,8 +50,8 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBWEBSOCKETSL};
 				${GDPATH}\Debug\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Debug\ARM\${DLLWEBSOCKETS};
 			}
 		}
 	
@@ -58,8 +59,8 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBWEBSOCKETSL};
 				${GDPATH}\Release\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Release\Win32\${DLLWEBSOCKETS};
 			}
 		}
 		
@@ -67,14 +68,14 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBWEBSOCKETSL};
 				${GDPATH}\Release\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Release\ARM\${DLLWEBSOCKETS};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRWEBSOCKETSDEPLIB;
+		Defines += HAS_GRWSDEPLIB;
 	};
 }

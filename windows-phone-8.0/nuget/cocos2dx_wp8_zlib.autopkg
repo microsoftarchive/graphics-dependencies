@@ -1,10 +1,10 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8_jpeg;
-		version : 0.0.0.3;
+		id = cocos2dx_wp8_zlib;
+		version : 0.0.0.1;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
-		owners: {Cocos2Dx, Graphics-Dependencies, libjpeg, Dale Stammen, Neil McLaughlin};
+		owners: {Cocos2Dx, Graphics-Dependencies, zlib, Dale Stammen, Neil McLaughlin};
 		licenseUrl: "http://www.microsoft.com";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
 		// TODO - set iconUrl
@@ -16,24 +16,22 @@ nuget {
 		description: @"Cocos2dx Image Libraries for WP8";
 		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
 		copyright: Copyright 2014;
-		tags: { Native, Cocos2d, Graphics-Dependencies, JPEG,JPG, arm, Win32, WP8 };
+		tags: { Native, Cocos2d, Graphics-Dependencies, ZLIB, arm, Win32, WP8 };
 	};
-
-
 	// the files that go into the content folders
 		files {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
-			GDPATH        =  .\prebuilt;
-			LIBJPEG	      =  libjpeg.lib;
+			GDPATH        =  ..\prebuilt;
+			LIBZLIB	      =  zlib.lib;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\libjpeg\*";
+		 	include: { ".\${GDPATH}\include\zlib\*";
 					
 		};					
 					
@@ -41,7 +39,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBJPEG};
+				${GDPATH}\Debug\Win32\${LIBZLIB};
 			}
 		}
 		
@@ -49,7 +47,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBJPEG};
+				${GDPATH}\Debug\ARM\${LIBZLIB};
 			}
 		}
 	
@@ -57,7 +55,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBJPEG};
+				${GDPATH}\Release\Win32\${LIBZLIB};
 			}
 		}
 		
@@ -65,13 +63,13 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBJPEG};
+				${GDPATH}\Release\ARM\${LIBZLIB};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRJPEGDEPLIB;
+		Defines += HAS_GRZLIBDEPLIB;
 	};
 }

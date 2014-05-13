@@ -25,7 +25,7 @@ nuget {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
-			GDPATH        =  .\prebuilt;
+			GDPATH        =  ..\prebuilt;
 			LIBCURL	      =  libcurl32.dll;
 		}
 	

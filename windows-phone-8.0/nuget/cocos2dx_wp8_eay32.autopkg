@@ -1,10 +1,10 @@
 nuget {
 	nuspec {
-		id = cocos2dx_wp8_tiff;
+		id = cocos2dx_wp8_eay32;
 		version : 0.0.0.1;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
-		owners: {Cocos2Dx, Graphics-Dependencies, libtiff, Dale Stammen, Neil McLaughlin};
+		owners: {Cocos2Dx, Graphics-Dependencies, libeay32, Dale Stammen, Neil McLaughlin};
 		licenseUrl: "http://www.microsoft.com";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
 		// TODO - set iconUrl
@@ -16,24 +16,23 @@ nuget {
 		description: @"Cocos2dx Image Libraries for WP8";
 		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
 		copyright: Copyright 2014;
-		tags: { Native, Cocos2d, Graphics-Dependencies, TIFF, arm, Win32, WP8 };
+		tags: { Native, Cocos2d, Graphics-Dependencies, EAY32, arm, Win32, WP8 };
 	};
-
 
 	// the files that go into the content folders
 		files {
 	
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
-			GDPATH        =  .\prebuilt;
-			LIBTIFF	      =  libtiff.lib;
+			GDPATH        =  ..\prebuilt;
+			LIBEAY32	      =  libeay32.dll;
 		}
 	
 		// grab all the files in the include folder
 		// the folder that contains all the .h files will 
 		// automatically get added to the Includes path.
 		// TODO - nestedInclude?
-		 	include: { ".\${GDPATH}\include\libtiff\*";
+		 	include: { ".\${GDPATH}\include\libeay32\*";
 					
 		};					
 					
@@ -41,7 +40,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Debug\Win32\${LIBTIFF};
+				${GDPATH}\Debug\Win32\${LIBEAY32};
 			}
 		}
 		
@@ -49,7 +48,7 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Debug\ARM\${LIBTIFF};
+				${GDPATH}\Debug\ARM\${LIBEAY32};
 			}
 		}
 	
@@ -57,7 +56,7 @@ nuget {
 		{
 			lib: 
 			{		
-				${GDPATH}\Release\Win32\${LIBTIFF};
+				${GDPATH}\Release\Win32\${LIBEAY32};
 			}
 		}
 		
@@ -65,13 +64,13 @@ nuget {
 		{
 			lib: 
 			{
-				${GDPATH}\Release\ARM\${LIBTIFF};
+				${GDPATH}\Release\ARM\${LIBEAY32};
 			}
 		}
 	};
 
 	targets {
 		// For consistency with example
-		Defines += HAS_GRTIFFDEPLIB;
+		Defines += HAS_GREAY32DEPLIB;
 	};
 }
