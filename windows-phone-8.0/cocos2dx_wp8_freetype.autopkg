@@ -1,7 +1,7 @@
 nuget {
 	nuspec {
 		id = cocos2dx_wp8_freetype;
-		version : 0.0.0.3;
+		version : 0.0.0.1;
 		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
 		authors: {Microsoft Corporation};
 		owners: {Cocos2Dx, Graphics-Dependencies, libfreetype, Dale Stammen, Neil McLaughlin};
@@ -26,7 +26,7 @@ nuget {
 		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
 					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
 			GDPATH        =  .\prebuilt;
-			LIBFREETYPE	      =  libfreetype.lib;
+			LIBFREETYPE	      =  freetype.lib;
 		}
 	
 		// grab all the files in the include folder
