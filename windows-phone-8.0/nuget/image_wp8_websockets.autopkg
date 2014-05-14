@@ -1,0 +1,80 @@
+nuget {
+	nuspec {
+		id = image_wp8_websockets;
+		version : 0.0.0.1;
+		title: Image Libraries for Graphics Dependencies for Windows Phone 8;
+		authors: {Microsoft Open Technologies, Inc.};
+		owners: {Microsoft Open Technologies, Inc.};
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/libwebsockets/websockets-8b/README";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";		 
+		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
+		requireLicenseAcceptance:false;
+		summary: Installer for Windows Phone 8 version of libwebsockets;
+		
+		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
+		description: @"Image Libraries for WP8 websockets";
+		releaseNotes: "Release of libwebsockets for image for WP8 (Visual Studio 2012, VC11, v110).";
+		copyright: Copyright © Microsoft Open Technologies, Inc.
+		tags: {websockets libwebsockets WP8 Windows Phone native nativepackage};
+	};
+
+	// the files that go into the content folders
+		files {
+	
+		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
+					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage image_wp8.autopkg
+			GDPATH        =  ..\prebuilt;
+			LIBWEBSOCKETS	      =  libwebsockets.lib;
+			DLLWEBSOCKETS		  =  libwebsockets.dll;
+		}
+	
+		// grab all the files in the include folder
+		// the folder that contains all the .h files will 
+		// automatically get added to the Includes path.
+		// TODO - include 3rd party headers?
+		 	include: { ".\${GDPATH}\include\libwebsockets\**\*";
+					
+		};					
+					
+		[win32,v110,debug] 
+		{
+			lib: 
+			{		
+				${GDPATH}\Debug\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Debug\Win32\${DLLWEBSOCKETS};
+			}
+		}
+		
+		[arm,v110,debug] 
+		{
+			lib: 
+			{
+				${GDPATH}\Debug\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Debug\ARM\${DLLWEBSOCKETS};
+			}
+		}
+	
+		[win32,v110,release] 
+		{
+			lib: 
+			{		
+				${GDPATH}\Release\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Release\Win32\${DLLWEBSOCKETS};
+			}
+		}
+		
+		[arm,v110,release] 
+		{
+			lib: 
+			{
+				${GDPATH}\Release\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Release\ARM\${DLLWEBSOCKETS};
+			}
+		}
+	};
+
+	targets {
+		// For consistency with example
+		Defines += HAS_GRWSDEPLIB;
+	};
+}
