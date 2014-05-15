@@ -12,8 +12,8 @@ nuget {
 		summary: libtiff for Windows Phone 8.0;
 		
 		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
-		description: @"prebuilt libtiff version 8b libs for Windows Phone 8.0";
-		releaseNotes: "prebuilt libtiff version 8b libs for Windows Phone 8.0";
+		description: @"prebuilt libtiff version 4.0.1 libs for Windows Phone 8.0";
+		releaseNotes: "prebuilt libtiff version 4.0.1 libs for Windows Phone 8.0";
 		copyright: "Copyright Microsoft Open Technologies, Inc.";
 		tags: {tiff, libtiff, WP8, Windows Phone, native, nativepackage};
 	};
