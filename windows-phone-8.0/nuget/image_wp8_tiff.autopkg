@@ -1,21 +1,21 @@
 nuget {
 	nuspec {
-		id = image_wp8_tiff;
+		id = libtiff_wp8;
 		version : 0.0.0.1;
-		title: Image Libraries for Graphics Dependencies for Windows Phone 8;
+		title: libtiff for Windows Phone 8.0;
 		authors: {Microsoft Open Technologies, Inc.};
 		owners: {Microsoft Open Technologies, Inc.};
-		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/libtiff/tiff-8b/README";
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/libtiff/tiff-4.0.1/COPYRIGHT";
 		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";		 
 		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
 		requireLicenseAcceptance:false;
-		summary: Installer for Windows Phone 8 version of libtiff;
+		summary: libtiff for Windows Phone 8.0;
 		
 		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
-		description: @"Image Libraries for WP8 tiff";
-		releaseNotes: "Release of libtiff for image for WP8 (Visual Studio 2012, VC11, v110).";
-		copyright: Copyright © Microsoft Open Technologies, Inc.
-		tags: {tiff libtiff WP8 Windows Phone native nativepackage};
+		description: @"prebuilt libtiff version 8b libs for Windows Phone 8.0";
+		releaseNotes: "prebuilt libtiff version 8b libs for Windows Phone 8.0";
+		copyright: "Copyright Microsoft Open Technologies, Inc.";
+		tags: {tiff, libtiff, WP8, Windows Phone, native, nativepackage};
 	};
 
 	// the files that go into the content folders
