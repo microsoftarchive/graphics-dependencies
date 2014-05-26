@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Conversion">
+      <UniqueIdentifier>{f3c10d8f-42bd-4b78-aa0d-7883ed868424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DeprecationMgr">
+      <UniqueIdentifier>{5760adec-b1e9-4c47-baf8-3fb3a7f87815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metadata">
+      <UniqueIdentifier>{60f83520-7617-4382-b3cf-9299dea86a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiPaging">
+      <UniqueIdentifier>{dab6d373-9376-429b-ac6b-081c68435a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{71f652f9-ecb5-4702-a0ee-f1349cfc7d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quantizers">
+      <UniqueIdentifier>{cb8dcfc1-e41e-4a0b-8fac-ae35343966e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Toolkit Files">
+      <UniqueIdentifier>{91def230-c9d2-488c-a1a1-63652a915eb0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion4.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion8.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion16_555.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion16_565.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion24.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion32.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionFloat.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionRGB16.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionRGBF.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionType.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionUINT16.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Halftoning.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoColorConvert.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoDrago03.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoFattal02.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoReinhard05.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ToneMapping.cpp">
+      <Filter>Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\DeprecationManager\Deprecated.cpp">
+      <Filter>DeprecationMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\DeprecationManager\DeprecationMgr.cpp">
+      <Filter>DeprecationMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\Exif.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\FIRational.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\FreeImageTag.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\IPTC.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\TagConversion.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\TagLib.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\XTIFF.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\CacheFile.cpp">
+      <Filter>MultiPaging</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\MultiPage.cpp">
+      <Filter>MultiPaging</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ZLibInterface.cpp">
+      <Filter>MultiPaging</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\J2KHelper.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\MNGHelper.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Plugin.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginBMP.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginCUT.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginDDS.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginEXR.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginG3.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginGIF.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginHDR.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginICO.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginIFF.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJ2K.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJNG.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJP2.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJPEG.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginKOALA.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginMNG.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPCD.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPCX.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPFM.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPICT.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPNG.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPNM.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPSD.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginRAS.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginRAW.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginSGI.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginTARGA.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginTIFF.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginWBMP.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginXBM.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginXPM.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PSDParser.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\TIFFLogLuv.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\NNQuantizer.cpp">
+      <Filter>Quantizers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\WuQuantizer.cpp">
+      <Filter>Quantizers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\BitmapAccess.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ColorLookup.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\FreeImage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\FreeImageC.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\FreeImageIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\GetType.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\MemoryIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PixelAccess.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Background.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\BSplineRotate.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Channels.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\ClassicRotate.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Colors.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\CopyPaste.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Display.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Flip.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\JPEGTransform.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\MultigridPoissonSolver.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Rescale.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Resize.cpp">
+      <Filter>Toolkit Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
