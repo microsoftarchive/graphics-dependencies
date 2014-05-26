@@ -18,64 +18,41 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Source\LibJPEG\LibJPEG.2013.UA\LibJPEG.2013.UA.WindowsPhone\LibJPEG.2013.UA.WindowsPhone.vcxproj">
-      <Project>{f03e4507-aa58-4791-a847-b128b4cbf6ab}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\LibOpenJPEG\LibOpenJPEG\LibOpenJPEG.WindowsPhone\LibOpenJPEG.WindowsPhone.vcxproj">
-      <Project>{3b9e9afd-1e10-4917-a72b-a72790f06c53}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\LibPNG\LibPNG.2013.UA\LibPNG.2013.UA.WindowsPhone\LibPNG.2013.UA.WindowsPhone.vcxproj">
-      <Project>{6a487ef6-3962-42c3-becb-306adba1a3a3}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\LibRawLite\LibRawLite.2013.UA\LibRawLite.2013.UA.WindowsPhone\LibRawLite.2013.UA.WindowsPhone.vcxproj">
-      <Project>{b0f2732a-7923-497d-993e-10ba1bd6dc5c}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\LibTIFF4\LibTIFF4\LibTIFF4.WindowsPhone\LibTIFF4.WindowsPhone.vcxproj">
-      <Project>{bff9e719-012f-49dd-8714-e6bfd0a96828}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\OpenEXR\OpenEXR\OpenEXR.WindowsPhone\OpenEXR.WindowsPhone.vcxproj">
-      <Project>{de82ad7a-51eb-4b52-978e-7e4b45f1f54d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\ZLib\ZLib.2013.UA\ZLib.2013.UA.WindowsPhone\ZLib.2013.UA.WindowsPhone.vcxproj">
-      <Project>{6f093292-f355-48a4-a49f-7280a1b8428f}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{c611845f-0ec5-40c1-ab8f-c70ef28fdc10}</ProjectGuid>
-    <RootNamespace>FreeImage</RootNamespace>
+    <ProjectGuid>{3b9e9afd-1e10-4917-a72b-a72790f06c53}</ProjectGuid>
+    <RootNamespace>LibOpenJPEG</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Phone</ApplicationType>
     <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
-    <ConvergedProjectType>CodeSharingDll</ConvergedProjectType>
+    <ConvergedProjectType>CodeSharingStaticLibrary</ConvergedProjectType>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120_wp81</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120_wp81</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v120_wp81</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v120_wp81</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <Import Project="..\FreeImage.Shared\FreeImage.Shared.vcxitems" Label="Shared" />
+  <Import Project="..\LibOpenJPEG.Shared\LibOpenJPEG.Shared.vcxitems" Label="Shared" />
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -91,26 +68,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;OPJ_STATIC;FREEIMAGE_EXPORTS;_CRT_SECURE_NO_DEPRECATE;LIBRAW_NODLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\Source;..\..\Source\ZLib;..\..\Source\DeprecationManager;..\..\Source\OpenEXR\Half;..\..\Source\OpenEXR\Iex;..\..\Source\OpenEXR\IlmImf;..\..\Source\OpenEXR\Imath;..\..\Source\OpenEXR\IlmThread;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_LIB;OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,8 +95,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;OPJ_STATIC;FREEIMAGE_EXPORTS;_CRT_SECURE_NO_DEPRECATE;LIBRAW_NODLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\Source;..\..\Source\ZLib;..\..\Source\DeprecationManager;..\..\Source\OpenEXR\Half;..\..\Source\OpenEXR\Iex;..\..\Source\OpenEXR\IlmImf;..\..\Source\OpenEXR\Imath;..\..\Source\OpenEXR\IlmThread;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_LIB;OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,8 +108,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;OPJ_STATIC;FREEIMAGE_EXPORTS;_CRT_SECURE_NO_DEPRECATE;LIBRAW_NODLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\Source;..\..\Source\ZLib;..\..\Source\DeprecationManager;..\..\Source\OpenEXR\Half;..\..\Source\OpenEXR\Iex;..\..\Source\OpenEXR\IlmImf;..\..\Source\OpenEXR\Imath;..\..\Source\OpenEXR\IlmThread;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_LIB;OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,8 +121,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;OPJ_STATIC;FREEIMAGE_EXPORTS;_CRT_SECURE_NO_DEPRECATE;LIBRAW_NODLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\Source;..\..\Source\ZLib;..\..\Source\DeprecationManager;..\..\Source\OpenEXR\Half;..\..\Source\OpenEXR\Iex;..\..\Source\OpenEXR\IlmImf;..\..\Source\OpenEXR\Imath;..\..\Source\OpenEXR\IlmThread;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_LIB;OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

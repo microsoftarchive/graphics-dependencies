@@ -30,6 +30,9 @@
     <ProjectReference Include="..\..\Source\LibJPEG\LibJPEG.2013.UA\LibJPEG.2013.UA.Windows\LibJPEG.2013.UA.Windows.vcxproj">
       <Project>{e06a8349-50a2-4aad-8631-aa7114e935a5}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\Source\LibOpenJPEG\LibOpenJPEG\LibOpenJPEG.Windows\LibOpenJPEG.Windows.vcxproj">
+      <Project>{06b0cb1b-c38c-43f0-89d0-167e02e8e72b}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\Source\LibPNG\LibPNG.2013.UA\LibPNG.2013.UA.Windows\LibPNG.2013.UA.Windows.vcxproj">
       <Project>{edc12904-3438-44b0-acf9-2cc25c02ed0b}</Project>
     </ProjectReference>
@@ -38,6 +41,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\Source\LibTIFF4\LibTIFF4\LibTIFF4.Windows\LibTIFF4.Windows.vcxproj">
       <Project>{0f1464b7-0336-4573-a5b6-30844d25fb87}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\OpenEXR\OpenEXR\OpenEXR.Windows\OpenEXR.Windows.vcxproj">
+      <Project>{23da872c-d489-45fa-aedc-6bd6d054f4a8}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Source\ZLib\ZLib.2013.UA\ZLib.2013.UA.Windows\ZLib.2013.UA.Windows.vcxproj">
       <Project>{8f981f97-b899-486c-80b4-58584445fb67}</Project>

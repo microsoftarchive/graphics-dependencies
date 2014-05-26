@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibOpenJPEG", "LibOpenJPEG", "{FF87AD60-FBE6-40DE-B75D-0CBF7C13066E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibOpenJPEG.Shared", "LibOpenJPEG\LibOpenJPEG.Shared\LibOpenJPEG.Shared.vcxitems", "{E6FE4C4F-A790-4370-BD9C-55F91FB08B2F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibOpenJPEG.Windows", "LibOpenJPEG\LibOpenJPEG.Windows\LibOpenJPEG.Windows.vcxproj", "{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibOpenJPEG.WindowsPhone", "LibOpenJPEG\LibOpenJPEG.WindowsPhone\LibOpenJPEG.WindowsPhone.vcxproj", "{3B9E9AFD-1E10-4917-A72B-A72790F06C53}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		LibOpenJPEG\LibOpenJPEG.Shared\LibOpenJPEG.Shared.vcxitems*{3b9e9afd-1e10-4917-a72b-a72790f06c53}*SharedItemsImports = 4
+		LibOpenJPEG\LibOpenJPEG.Shared\LibOpenJPEG.Shared.vcxitems*{06b0cb1b-c38c-43f0-89d0-167e02e8e72b}*SharedItemsImports = 4
+		LibOpenJPEG\LibOpenJPEG.Shared\LibOpenJPEG.Shared.vcxitems*{e6fe4c4f-a790-4370-bd9c-55f91fb08b2f}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Debug|ARM.Build.0 = Debug|ARM
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Debug|Win32.Build.0 = Debug|Win32
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Debug|x64.ActiveCfg = Debug|x64
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Debug|x64.Build.0 = Debug|x64
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Release|ARM.ActiveCfg = Release|ARM
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Release|ARM.Build.0 = Release|ARM
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Release|Win32.ActiveCfg = Release|Win32
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Release|Win32.Build.0 = Release|Win32
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Release|x64.ActiveCfg = Release|x64
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B}.Release|x64.Build.0 = Release|x64
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Debug|ARM.Build.0 = Debug|ARM
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Debug|Win32.Build.0 = Debug|Win32
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Debug|x64.ActiveCfg = Debug|Win32
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Release|ARM.ActiveCfg = Release|ARM
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Release|ARM.Build.0 = Release|ARM
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Release|Win32.ActiveCfg = Release|Win32
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Release|Win32.Build.0 = Release|Win32
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6FE4C4F-A790-4370-BD9C-55F91FB08B2F} = {FF87AD60-FBE6-40DE-B75D-0CBF7C13066E}
+		{06B0CB1B-C38C-43F0-89D0-167E02E8E72B} = {FF87AD60-FBE6-40DE-B75D-0CBF7C13066E}
+		{3B9E9AFD-1E10-4917-A72B-A72790F06C53} = {FF87AD60-FBE6-40DE-B75D-0CBF7C13066E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{835486df-e137-4d1e-8e50-4737371c28bb}</ItemsProjectGuid>
+    <ItemsRootNamespace>OpenEXR</ItemsRootNamespace>
+    <ItemsProjectName>OpenEXR.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Half\half.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Iex\IexBaseExc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Iex\IexThrowErrnoExc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\b44ExpLogTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfAcesFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfB44Compressor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfBoxAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfChannelList.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfChannelListAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfChromaticities.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfChromaticitiesAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfCompressionAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfCompressor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfConvert.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfCRgbaFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfDoubleAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfEnvmap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfEnvmapAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfFloatAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfFrameBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfFramesPerSecond.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfHeader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfHuf.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfInputFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfIntAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfKeyCode.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfKeyCodeAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfLineOrderAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfLut.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfMatrixAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfMisc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfMultiView.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfOpaqueAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfOutputFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfPizCompressor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfPreviewImage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfPreviewImageAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfPxr24Compressor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfRational.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfRationalAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfRgbaFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfRgbaYca.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfRleCompressor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfScanLineInputFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfStandardAttributes.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfStdIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfStringAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfStringVectorAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTestFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfThreading.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTileDescriptionAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTiledInputFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTiledMisc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTiledOutputFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTiledRgbaFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTileOffsets.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTimeCode.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfTimeCodeAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfVecAttribute.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfVersion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfWav.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmImf\ImfZipCompressor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmThread\IlmThread.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmThread\IlmThreadMutex.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmThread\IlmThreadPool.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\IlmThread\IlmThreadSemaphore.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathBox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathColorAlgo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathFun.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathMatrixAlgo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathRandom.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathShear.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Imath\ImathVec.cpp" />
+  </ItemGroup>
+</Project>
