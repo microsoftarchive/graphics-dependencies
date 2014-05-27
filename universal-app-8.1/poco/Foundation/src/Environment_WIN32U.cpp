@@ -41,8 +41,10 @@
 #include <sstream>
 #include <cstring>
 #include "Poco/UnWindows.h"
-#include <iphlpapi.h>
 
+#if !WINAPI_FAMILY_PARTITION(WINAPI_FAMILY_APP)
+#include <iphlpapi.h>
+#endif
 
 namespace Poco {
 

@@ -1,7 +1,7 @@
 nuget {
 	nuspec {
 		id = freeimage_universal;
-		version : 0.0.0.1;
+		version : 0.0.0.2;
 		title: FreeImage for WinRT and WP8.1;
 		authors: {Microsoft Open Technologies, Inc.};
 		owners: {Microsoft Open Technologies, Inc.};
@@ -35,111 +35,58 @@ nuget {
 			".\${INCLUDE}\FreeImage.h";
 		}
 
-
 		// VS2013 WinRT
-		[win32,v120,debug,winrt] 
+		[x86,v120,debug,winrt] 
 		{
-			lib:
-			{
-				${WIN32_DEBUG}\FreeImage.Windows\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${WIN32_DEBUG}\FreeImage.Windows\FreeImage.dll;
-			}
+			lib:${WIN32_DEBUG}\FreeImage.Windows\FreeImage.lib;
+			symbols:${WIN32_DEBUG}\FreeImage.Windows\FreeImage.pdb;
+			bin:${WIN32_DEBUG}\FreeImage.Windows\FreeImage.dll;
 		};
 
-		[win32,v120,release,winrt] 
+		[x86,v120,release,winrt] 
 		{
-			lib:
-			{
-				${WIN32_RELEASE}\FreeImage.Windows\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${WIN32_RELEASE}\FreeImage.Windows\FreeImage.dll;
-			}
+			lib:${WIN32_RELEASE}\FreeImage.Windows\FreeImage.lib;
+			bin: ${WIN32_RELEASE}\FreeImage.Windows\FreeImage.dll;
 		};
 		
 		[arm,v120,debug,winrt] 
 		{
-			lib:
-			{
-				${ARM_DEBUG}\FreeImage.Windows\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${ARM_DEBUG}\FreeImage.Windows\FreeImage.dll;
-			}
+			lib:${ARM_DEBUG}\FreeImage.Windows\FreeImage.lib;
+			symbols:${ARM_DEBUG}\FreeImage.Windows\FreeImage.pdb;
+			bin:${ARM_DEBUG}\FreeImage.Windows\FreeImage.dll;
 		};
 
 		[arm,v120,release,winrt] 
 		{
-			lib:
-			{
-				${ARM_RELEASE}\FreeImage.Windows\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${ARM_RELEASE}\FreeImage.Windows\FreeImage.dll;
-			}
+			lib:${ARM_RELEASE}\FreeImage.Windows\FreeImage.lib;
+			bin: ${ARM_RELEASE}\FreeImage.Windows\FreeImage.dll;
 		};	
 
 		// Phone 8.1
-		[win32,v120,debug,phone] 
+		[x86,v120,debug,phone] 
 		{
-			lib:
-			{
-				${WIN32_DEBUG}\FreeImage.WindowsPhone\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${WIN32_DEBUG}\FreeImage.WindowsPhone\FreeImage.dll;
-			}
+			lib:${WIN32_DEBUG}\FreeImage.WindowsPhone\FreeImage.lib;
+			symbols:${WIN32_DEBUG}\FreeImage.WindowsPhone\FreeImage.pdb;
+			bin: ${WIN32_DEBUG}\FreeImage.WindowsPhone\FreeImage.dll;
 		};
 
-		[win32,v120,release,phone] 
+		[x86,v120,release,phone] 
 		{
-			lib:
-			{
-				${WIN32_RELEASE}\FreeImage.WindowsPhone\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${WIN32_RELEASE}\FreeImage.WindowsPhone\FreeImage.dll;
-			}
+			lib:${WIN32_RELEASE}\FreeImage.WindowsPhone\FreeImage.lib;
+			bin: ${WIN32_RELEASE}\FreeImage.WindowsPhone\FreeImage.dll;
 		};
 		
 		[arm,v120,debug,phone] 
 		{
-			lib:
-			{
-				${ARM_DEBUG}\FreeImage.WindowsPhone\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${ARM_DEBUG}\FreeImage.WindowsPhone\FreeImage.dll;
-			}
+			lib:${ARM_DEBUG}\FreeImage.WindowsPhone\FreeImage.lib;
+			symbols:${ARM_DEBUG}\FreeImage.WindowsPhone\FreeImage.pdb;
+			bin: ${ARM_DEBUG}\FreeImage.WindowsPhone\FreeImage.dll;
 		};
 
 		[arm,v120,release,phone] 
 		{
-			lib:
-			{
-				${ARM_RELEASE}\FreeImage.WindowsPhone\FreeImage.lib;
-			}
-
-			bin: 
-			{
-				${ARM_RELEASE}\FreeImage.WindowsPhone\FreeImage.dll;
-			}
+			lib:${ARM_RELEASE}\FreeImage.WindowsPhone\FreeImage.lib;
+			bin:${ARM_RELEASE}\FreeImage.WindowsPhone\FreeImage.dll;
 		};	
 	};
 }
