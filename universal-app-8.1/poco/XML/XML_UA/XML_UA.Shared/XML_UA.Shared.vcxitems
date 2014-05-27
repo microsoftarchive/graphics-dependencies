@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{703d94d2-5b48-4876-a11b-426668dfc7ed}</ItemsProjectGuid>
+    <ItemsRootNamespace>XML_UA</ItemsRootNamespace>
+    <ItemsProjectName>XML_UA.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\AbstractContainerNode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\AbstractNode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Attr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\AttrMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\AutoPtr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\CDATASection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\CharacterData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\ChildNodesList.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Comment.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Document.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DocumentEvent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DocumentFragment.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DocumentType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMBuilder.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMImplementation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMParser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMSerializer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DOMWriter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\DTDMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Element.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\ElementsByTagNameList.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Entity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\EntityReference.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Event.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\EventDispatcher.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\EventException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\EventListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\EventTarget.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\MutationEvent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\NamedNodeMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Node.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\NodeAppender.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\NodeFilter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\NodeIterator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\NodeList.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Notation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\ProcessingInstruction.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\Text.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DOM\TreeWalker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\Attributes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\AttributesImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\ContentHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\DeclHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\DefaultHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\DTDHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\EntityResolver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\EntityResolverImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\ErrorHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\InputSource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\LexicalHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\Locator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\LocatorImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\NamespaceSupport.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\SAXException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\SAXParser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\WhitespaceFilter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\XMLFilter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\XMLFilterImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\SAX\XMLReader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\expat.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\expat_external.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\Name.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\NamePool.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\NamespaceStrategy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\ParserEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\XML.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\XMLException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\XMLStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\XMLString.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\XML\XMLWriter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\ascii.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\asciitab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\expat_config.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\iasciitab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\latin1tab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\nametab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\utf8tab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\xmlrole.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\xmltok.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\xmltok_impl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AbstractContainerNode.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AbstractNode.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Attr.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Attributes.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AttributesImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\CDATASection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\CharacterData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ChildNodesList.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Comment.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ContentHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DeclHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DefaultHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Document.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DocumentEvent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DocumentFragment.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DocumentType.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMBuilder.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMImplementation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMParser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMSerializer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DOMWriter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DTDHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DTDMap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Element.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ElementsByTagNameList.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Entity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EntityReference.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EntityResolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EntityResolverImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ErrorHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Event.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EventDispatcher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EventException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EventListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\EventTarget.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\InputSource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LexicalHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Locator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LocatorImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MutationEvent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Name.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NamedNodeMap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NamePool.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NamespaceStrategy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NamespaceSupport.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Node.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NodeAppender.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NodeFilter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NodeIterator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NodeList.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Notation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ParserEngine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ProcessingInstruction.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SAXException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SAXParser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Text.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\TreeWalker.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\WhitespaceFilter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLFilter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLFilterImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\xmlparse.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLReader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\xmlrole.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLString.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\xmltok.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLWriter.cpp" />
+  </ItemGroup>
+</Project>
