@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{6e99aab0-e3cc-4978-89b9-56151a131fef}</ItemsProjectGuid>
+    <ItemsRootNamespace>LibRawLite_2013_UA</ItemsRootNamespace>
+    <ItemsProjectName>LibRaw.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\internal\dcraw_common.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\internal\dcraw_fileio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\internal\demosaic_packs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\libraw_cxx.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\libraw_c_api.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\libraw_datastream.cpp" />
+  </ItemGroup>
+</Project>

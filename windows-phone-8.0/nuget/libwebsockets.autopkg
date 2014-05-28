@@ -1,0 +1,89 @@
+nuget {
+	nuspec {
+		id = libwebsockets_wp8;
+		version : 0.0.0.2;
+		title: libwebsockets for Windows Phone 8.0;
+		authors: {Microsoft Open Technologies, Inc.};
+		owners: {Microsoft Open Technologies, Inc.};
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/windows-phone-8.0/libwebsockets/LICENSE";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";		 
+		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
+		requireLicenseAcceptance:false;
+		summary: libwebsockets for Windows Phone 8.0;
+		
+		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
+		description: @"prebuilt libwebsockets version 1.3 libs for Windows Phone 8.0";
+		releaseNotes: "prebuilt libwebsockets version 1.3 libs for Windows Phone 8.0";
+		copyright: "Copyright Microsoft Open Technologies, Inc.";
+		tags: {websocket, websockets, libwebsockets, WP8, Windows Phone, native, nativepackage};
+	};	
+	
+	// the files that go into the content folders
+		files {
+	
+		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
+					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage image_wp8.autopkg
+			PATH        =  ..\prebuilt\;
+		}
+	
+		// grab all the files in the include folder
+		// the folder that contains all the .h files will 
+		// automatically get added to the Includes path.
+		// TODO - nestedInclude?
+		 	include: { ".\${PATH}\include\libwebsockets\**\*";
+					
+		};					
+					
+		[win32,v110,debug] 
+		{
+			lib: 
+			{		
+				${PATH}\Debug\Win32\libwebsockets.lib;
+			}
+
+			bin:
+			{
+				${PATH}\Debug\Win32\libwebsockets.dll;
+			}
+		}
+		
+		[arm,v110,debug] 
+		{
+			lib: 
+			{		
+				${PATH}\Debug\ARM\libwebsockets.lib;
+			}
+
+			bin:
+			{
+				${PATH}\Debug\ARM\libwebsockets.dll;
+			}
+		}
+	
+		[win32,v110,release] 
+		{
+			lib: 
+			{		
+				${PATH}\Release\Win32\libwebsockets.lib;
+			}
+
+			bin:
+			{
+				${PATH}\Release\Win32\libwebsockets.dll;
+			}
+		}
+		
+		[arm,v110,release] 
+		{
+			lib: 
+			{		
+				${PATH}\Release\ARM\libwebsockets.lib;
+			}
+
+			bin:
+			{
+				${PATH}\Release\ARM\libwebsockets.dll;
+			}
+		}
+	};
+}

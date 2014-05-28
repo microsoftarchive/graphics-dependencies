@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenEXR", "OpenEXR", "{1A1C0F4C-945D-4CE8-8AD1-7FB4F20A7E78}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenEXR.Shared", "OpenEXR\OpenEXR.Shared\OpenEXR.Shared.vcxitems", "{835486DF-E137-4D1E-8E50-4737371C28BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenEXR.Windows", "OpenEXR\OpenEXR.Windows\OpenEXR.Windows.vcxproj", "{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenEXR.WindowsPhone", "OpenEXR\OpenEXR.WindowsPhone\OpenEXR.WindowsPhone.vcxproj", "{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		OpenEXR\OpenEXR.Shared\OpenEXR.Shared.vcxitems*{23da872c-d489-45fa-aedc-6bd6d054f4a8}*SharedItemsImports = 4
+		OpenEXR\OpenEXR.Shared\OpenEXR.Shared.vcxitems*{de82ad7a-51eb-4b52-978e-7e4b45f1f54d}*SharedItemsImports = 4
+		OpenEXR\OpenEXR.Shared\OpenEXR.Shared.vcxitems*{835486df-e137-4d1e-8e50-4737371c28bb}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Debug|ARM.ActiveCfg = Debug|ARM
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Debug|ARM.Build.0 = Debug|ARM
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Debug|Win32.Build.0 = Debug|Win32
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Debug|x64.ActiveCfg = Debug|x64
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Debug|x64.Build.0 = Debug|x64
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Release|ARM.ActiveCfg = Release|ARM
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Release|ARM.Build.0 = Release|ARM
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Release|Win32.ActiveCfg = Release|Win32
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Release|Win32.Build.0 = Release|Win32
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Release|x64.ActiveCfg = Release|x64
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8}.Release|x64.Build.0 = Release|x64
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Debug|ARM.Build.0 = Debug|ARM
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Debug|Win32.Build.0 = Debug|Win32
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Debug|x64.ActiveCfg = Debug|Win32
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Release|ARM.ActiveCfg = Release|ARM
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Release|ARM.Build.0 = Release|ARM
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Release|Win32.ActiveCfg = Release|Win32
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Release|Win32.Build.0 = Release|Win32
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{835486DF-E137-4D1E-8E50-4737371C28BB} = {1A1C0F4C-945D-4CE8-8AD1-7FB4F20A7E78}
+		{23DA872C-D489-45FA-AEDC-6BD6D054F4A8} = {1A1C0F4C-945D-4CE8-8AD1-7FB4F20A7E78}
+		{DE82AD7A-51EB-4B52-978E-7E4B45F1F54D} = {1A1C0F4C-945D-4CE8-8AD1-7FB4F20A7E78}
+	EndGlobalSection
+EndGlobal

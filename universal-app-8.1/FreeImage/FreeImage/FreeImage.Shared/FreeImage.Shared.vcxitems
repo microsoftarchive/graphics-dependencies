@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{d04d4f85-4308-4a32-8b69-b1680acda27d}</ItemsProjectGuid>
+    <ItemsRootNamespace>FreeImage</ItemsRootNamespace>
+    <ItemsProjectName>FreeImage.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\DeprecationManager\Deprecated.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\DeprecationManager\DeprecationMgr.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Background.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\BSplineRotate.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Channels.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\ClassicRotate.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Colors.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\CopyPaste.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Display.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Flip.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\JPEGTransform.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\MultigridPoissonSolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Rescale.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImageToolkit\Resize.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\BitmapAccess.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\CacheFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ColorLookup.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion16_555.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion16_565.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion24.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion32.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion4.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Conversion8.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionFloat.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionRGB16.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionRGBF.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionType.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ConversionUINT16.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\FreeImage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\FreeImageC.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\FreeImageIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\GetType.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Halftoning.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\J2KHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\MemoryIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\MNGHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\MultiPage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\NNQuantizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PixelAccess.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\Plugin.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginBMP.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginCUT.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginDDS.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginEXR.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginG3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginGIF.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginHDR.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginICO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginIFF.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJ2K.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJNG.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJP2.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginJPEG.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginKOALA.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginMNG.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPCD.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPCX.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPFM.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPICT.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPNG.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPNM.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginPSD.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginRAS.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginRAW.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginSGI.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginTARGA.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginTIFF.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginWBMP.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginXBM.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PluginXPM.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\PSDParser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\TIFFLogLuv.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoColorConvert.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoDrago03.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoFattal02.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\tmoReinhard05.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ToneMapping.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\WuQuantizer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\FreeImage\ZLibInterface.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\Exif.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\FIRational.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\FreeImageTag.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\IPTC.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\TagConversion.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\TagLib.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Source\Metadata\XTIFF.cpp" />
+  </ItemGroup>
+</Project>

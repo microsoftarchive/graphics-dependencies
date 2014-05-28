@@ -1,0 +1,84 @@
+nuget {
+	nuspec {
+		id = cocos2dx_wp8;
+		version : 1.0.0.2;
+		title: Image Libraries for Cocos2dx Graphics Dependencies for Windows Phone 8;
+		authors: {Microsoft Corporation};
+		owners: {Cocos2Dx, Graphics-Dependencies, libjpeg, Dale Stammen, Neil McLaughlin};
+		licenseUrl: "http://www.microsoft.com";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies";
+		// TODO - set iconUrl
+		iconUrl: "https://download-codeplex.sec.s-msft.com/Download?ProjectName=casablanca&DownloadId=630102&Build=20425";
+		requireLicenseAcceptance:false;
+		summary: Installer for Windows Phone 8 version of the Cocos2dx Graphics Depedencies libs and dlls;
+		
+		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
+		description: @"Cocos2dx Image Libraries for WP8";
+		releaseNotes: "Release of Image Libaries for Cocos2dx for WP8 (Visual Studio 2012 VC11, v110).";
+		copyright: Copyright 2014;
+		tags: { Cocos2d, Graphics-Dependencies, FREETYPE, JPEG,JPG, PNG, TIFF, ZLIB, arm, Win32, WP8 };
+	};
+
+	// the files that go into the content folders
+		files {
+	
+		#defines { // NOTE - this uses a relative path and therefore must be run from the opencv (or your root) directory 
+					// Example : PS C:\Users\YourName\Documents\github\opencv>Write-NuGetPackage cocos2dx_wp8.autopkg
+			GDPATH        =  windows-phone-8.0\prebuilt;
+			LIBFREETYPE   =  freetype.lib;
+			LIBJPEG	      =  libjpeg.lib;
+			LIBPNG        =  libpng.lib;
+			LIBTIFF       =  libtiff.lib;
+			LIBZ	      =	 zlib.lib;
+			LIBCURL	      =	 libcurl.dll;
+			LIBEAY32      =	 libeay32.dll;
+			LIBWEBSOCKETS =	 libwebsockets.dll;
+			LIBWEBSOCKETSL=	 libwebsockets.lib;
+		}
+	
+		// grab all the files in the include folder
+		// the folder that contains all the .h files will 
+		// automatically get added to the Includes path.
+		// TODO - include 3rd party headers?
+		 	include: { ".\windows-phone-8.0\prebuilt\include\**\*";
+					
+		};					
+					
+		[x86,v110,release] 
+		{
+			lib: 
+			{
+				${GDPATH}\Release\Win32\${LIBFREETYPE};
+				${GDPATH}\Release\Win32\${LIBJPEG};
+				${GDPATH}\Release\Win32\${LIBPNG};
+				${GDPATH}\Release\Win32\${LIBTIFF};
+				${GDPATH}\Release\Win32\${LIBZ};
+				${GDPATH}\Release\Win32\${LIBCURL};
+				${GDPATH}\Release\Win32\${LIBEAY32};
+				${GDPATH}\Release\Win32\${LIBWEBSOCKETS};
+				${GDPATH}\Release\Win32\${LIBWEBSOCKETSL};
+			}
+		}
+		
+		[arm,v110,release] 
+		{
+			lib: 
+			{
+				${GDPATH}\Release\ARM\${LIBFREETYPE};
+				${GDPATH}\Release\ARM\${LIBJPEG};
+				${GDPATH}\Release\ARM\${LIBPNG};
+				${GDPATH}\Release\ARM\${LIBTIFF};
+				${GDPATH}\Release\ARM\${LIBZ};
+				${GDPATH}\Release\ARM\${LIBCURL};
+				${GDPATH}\Release\ARM\${LIBEAY32};
+				${GDPATH}\Release\ARM\${LIBWEBSOCKETS};
+				${GDPATH}\Release\ARM\${LIBWEBSOCKETSL};
+			}
+		}
+	};
+
+	targets {
+		// For consistency with example
+		Defines += HAS_GRDEPLIB;
+	};
+}

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{99b8878d-070b-4fe6-bfcf-4ce092d32131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraw">
+      <UniqueIdentifier>{5d35e314-e58b-41c6-a93c-e054efec2c91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\internal\dcraw_common.cpp">
+      <Filter>internal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\internal\dcraw_fileio.cpp">
+      <Filter>internal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\internal\demosaic_packs.cpp">
+      <Filter>internal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\libraw_c_api.cpp">
+      <Filter>libraw</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\libraw_cxx.cpp">
+      <Filter>libraw</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\libraw_datastream.cpp">
+      <Filter>libraw</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

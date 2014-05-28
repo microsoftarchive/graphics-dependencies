@@ -27,7 +27,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>LibPNG</ProjectName>
+    <ProjectName>LibPNG2</ProjectName>
     <ProjectGuid>{7DB10B50-CE00-4D7A-B322-6824F05D2FCB}</ProjectGuid>
     <RootNamespace>LibPNG</RootNamespace>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>

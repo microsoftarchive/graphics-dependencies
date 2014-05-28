@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\bio.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\cidx_manager.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\cio.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\dwt.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\event.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\image.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\j2k.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\j2k_lib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jp2.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\jpt.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\mct.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\mqc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\openjpeg.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\phix_manager.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\pi.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\ppix_manager.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\raw.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\t1.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\t1_generate_luts.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\t2.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\tcd.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\tgt.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\thix_manager.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\tpix_manager.c" />
+  </ItemGroup>
+</Project>

@@ -467,7 +467,7 @@ void *LibRaw_bigfile_datastream::make_jas_stream()
 }
 
 // == LibRaw_windows_datastream
-#ifdef WIN32
+#if defined(WIN32) && !defined(WP8)
 
 LibRaw_windows_datastream::LibRaw_windows_datastream(const TCHAR* sFile)
     : LibRaw_buffer_datastream(NULL, 0)

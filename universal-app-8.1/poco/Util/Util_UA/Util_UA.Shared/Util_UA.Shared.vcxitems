@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{7a0e76b8-ab6b-48a5-967c-24996c7934f5}</ItemsProjectGuid>
+    <ItemsRootNamespace>Util_UA</ItemsRootNamespace>
+    <ItemsProjectName>Util_UA.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\AbstractConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\Application.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\ConfigurationMapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\ConfigurationView.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\FilesystemConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\HelpFormatter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\IniFileConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\IntValidator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\JSONConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\LayeredConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\LoggingConfigurator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\LoggingSubsystem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\MapConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\Option.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\OptionCallback.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\OptionException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\OptionProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\OptionSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\PropertyFileConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\RegExpValidator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\ServerApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\Subsystem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\Timer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\TimerTask.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\TimerTaskAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\Util.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\Validator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\WinRegistryConfiguration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\WinRegistryKey.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\WinService.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Util\XMLConfiguration.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AbstractConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ConfigurationMapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ConfigurationView.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\FilesystemConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HelpFormatter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\IniFileConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\IntValidator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\JSONConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LayeredConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LoggingConfigurator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LoggingSubsystem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MapConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Option.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\OptionCallback.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\OptionException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\OptionProcessor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\OptionSet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PropertyFileConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\RegExpValidator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Subsystem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SystemConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Timer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\TimerTask.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Validator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLConfiguration.cpp" />
+  </ItemGroup>
+</Project>
