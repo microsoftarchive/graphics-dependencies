@@ -1,0 +1,72 @@
+nuget {
+	nuspec {
+		id = rtaudio_winrt;
+		version : 0.0.0.1;
+		title: rtaudio for WinRT 8.1;
+		authors: {Microsoft Open Technologies, Inc.};
+		owners: {Microsoft Open Technologies, Inc.};
+		licenseUrl: "https://github.com/MSOpenTech/graphics-dependencies/blob/master/universal-app-8.1/rtaudio/rtaudio-4.0.12/doc/doxygen/license.txt";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies/tree/master/universal-app-8.1/rtaudio";
+		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
+		requireLicenseAcceptance:false;
+		summary: rtaudio for WinRT 8.1;
+		
+		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
+		description: @"rtaudio for WinRT 8.1";
+		releaseNotes: "rtaudio for WinRT 8.1";
+		copyright: "Copyright Microsoft Open Technologies, Inc";
+		tags: { native, rtaudio, librtaudio, universal, WinRT };
+	};
+
+	// the files that go into the content folders
+	files {
+	
+		#defines 
+		{
+			WIN32_DEBUG	=  ..\Debug;
+			WIN32_RELEASE	=  ..\Release;
+			ARM_DEBUG	=  ..\ARM\Debug;
+			ARM_RELEASE	=  ..\ARM\Release;
+		}
+	
+		include: 
+		{ 
+			"..\rtaudio-4.0.12\RtAudio.h";
+			"..\rtaudio-4.0.12\RtError.h";
+			"..\rtaudio-4.0.12\doc\doxygen\license.txt";
+		}
+
+		// VS2013 WinRT
+		[x86,v120,debug,winrt] 
+		{
+			lib:
+			{
+				${WIN32_DEBUG}\rtaudio.Windows\rtAudioD.lib;
+			}
+		};
+
+		[x86,v120,release,winrt] 
+		{
+			lib:
+			{
+				${WIN32_RELEASE}\rtaudio.Windows\rtaudio.lib;
+			}
+		};
+		
+		[arm,v120,debug,winrt] 
+		{
+			lib:
+			{
+				${ARM_DEBUG}\rtaudio.Windows\rtAudioD.lib;
+			}
+		};
+
+		[arm,v120,release,winrt] 
+		{
+			lib:
+			{
+				${ARM_RELEASE}\rtaudio.Windows\rtaudio.lib;
+			}
+		};	
+	};
+}
