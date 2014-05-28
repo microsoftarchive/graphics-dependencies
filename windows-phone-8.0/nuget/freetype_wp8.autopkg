@@ -1,7 +1,7 @@
 nuget {
 	nuspec {
 		id = freetype_wp8;
-		version : 0.0.0.1;
+		version : 0.0.0.2;
 		title: freetype for Windows Phone 8.0;
 		authors: {Microsoft Open Technologies, Inc.};
 		owners: {Microsoft Open Technologies, Inc.};
