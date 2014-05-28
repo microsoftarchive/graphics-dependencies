@@ -1,7 +1,7 @@
 nuget {
 	nuspec {
 		id = poco_wp8_1;
-		version : 0.0.0.1;
+		version : 0.0.0.2;
 		title: POCO for WP8.1;
 		authors: {Microsoft Open Technologies, Inc.};
 		owners: {Microsoft Open Technologies, Inc.};
@@ -36,7 +36,7 @@ nuget {
 		}
 
 		// Phone 8.1
-		[x86,v120,debug,phone] 
+		[x86,v120,debug] 
 		{
 			lib:
 			{
@@ -46,7 +46,7 @@ nuget {
 			}
 		};
 
-		[x86,v120,release,phone] 
+		[x86,v120,release] 
 		{
 			lib:
 			{
@@ -56,7 +56,7 @@ nuget {
 			}
 		};
 		
-		[arm,v120,debug,phone] 
+		[arm,v120,debug] 
 		{
 			lib:
 			{
@@ -66,7 +66,7 @@ nuget {
 			}
 		};
 
-		[arm,v120,release,phone] 
+		[arm,v120,release] 
 		{
 			lib:
 			{
