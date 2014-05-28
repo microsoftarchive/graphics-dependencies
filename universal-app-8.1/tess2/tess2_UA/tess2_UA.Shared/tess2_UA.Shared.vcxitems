@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{725104ca-e36f-4cba-a137-de75d2c4d18b}</ItemsProjectGuid>
+    <ItemsRootNamespace>tess2_UA</ItemsRootNamespace>
+    <ItemsProjectName>tess2_UA.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\bucketalloc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\dict.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\geom.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\mesh.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\priorityq.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\sweep.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Sources\tess.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\bucketalloc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\dict.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\geom.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\mesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\priorityq.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\sweep.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Sources\tess.h" />
+  </ItemGroup>
+</Project>
