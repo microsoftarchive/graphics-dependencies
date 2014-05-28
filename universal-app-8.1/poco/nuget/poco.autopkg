@@ -1,0 +1,120 @@
+nuget {
+	nuspec {
+		id = poco_universal;
+		version : 0.0.0.1;
+		title: POCO for WinRT and WP8.1;
+		authors: {Microsoft Open Technologies, Inc.};
+		owners: {Microsoft Open Technologies, Inc.};
+		licenseUrl: "http://pocoproject.org/license.html";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies/tree/master/universal-app-8.1/poco";
+		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
+		requireLicenseAcceptance:false;
+		summary: POCO for WinRT and WP8.1;
+		
+		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
+		description: @"POCO for WinRT and WP8.1. Foundation, XML, Utils only. Work in progress. Not everything is supported.";
+		releaseNotes: "POCO for WinRT and WP8.1. Foundation, XML, Utils only. Work in progress. Not everything is supported.";
+		copyright: "Copyright Microsoft Open Technologies, Inc";
+		tags: { native, poco, pocolib, universal, WinRT, WP8, WP8.1 };
+	};
+
+	// the files that go into the content folders
+	files {
+	
+		#defines 
+		{
+			WIN32_DEBUG	=  ..\Debug;
+			WIN32_RELEASE	=  ..\Release;
+			ARM_DEBUG	=  ..\ARM\Debug;
+			ARM_RELEASE	=  ..\ARM\Release;
+			INCLUDE	=  .\UA_redist\;
+		}
+	
+		include: 
+		{ 
+			".\${INCLUDE}\**\*";
+		}
+
+		// VS2013 WinRT
+		[x86,v120,debug,winrt] 
+		{
+			lib:
+			{
+				${WIN32_DEBUG}\Foundation_UA.Windows\PocoFoundationmdd.lib;
+				${WIN32_DEBUG}\Util_UA.Windows\PocoUtilmdd.lib;
+				${WIN32_DEBUG}\XML_UA.Windows\PocoXMLmdd.lib;
+			}
+		};
+
+		[x86,v120,release,winrt] 
+		{
+			lib:
+			{
+				${WIN32_RELEASE}\Foundation_UA.Windows\PocoFoundationmd.lib;
+				${WIN32_RELEASE}\Util_UA.Windows\PocoUtilmd.lib;
+				${WIN32_RELEASE}\XML_UA.Windows\PocoXMLmd.lib;
+			}
+		};
+		
+		[arm,v120,debug,winrt] 
+		{
+			lib:
+			{
+				${ARM_DEBUG}\Foundation_UA.Windows\PocoFoundationmdd.lib;
+				${ARM_DEBUG}\Util_UA.Windows\PocoUtilmdd.lib;
+				${ARM_DEBUG}\XML_UA.Windows\PocoXMLmdd.lib;
+			}
+		};
+
+		[arm,v120,release,winrt] 
+		{
+			lib:
+			{
+				${ARM_RELEASE}\Foundation_UA.Windows\PocoFoundationmd.lib;
+				${ARM_RELEASE}\Util_UA.Windows\PocoUtilmd.lib;
+				${ARM_RELEASE}\XML_UA.Windows\PocoXMLmd.lib;
+			}
+		};	
+
+		// Phone 8.1
+		[x86,v120,debug,phone] 
+		{
+			lib:
+			{
+				${WIN32_DEBUG}\Foundation_UA.WindowsPhone\PocoFoundationmdd.lib;
+				${WIN32_DEBUG}\Util_UA.WindowsPhone\PocoUtilmdd.lib;
+				${WIN32_DEBUG}\XML_UA.WindowsPhone\PocoXMLmdd.lib;
+			}
+		};
+
+		[x86,v120,release,phone] 
+		{
+			lib:
+			{
+				${WIN32_RELEASE}\Foundation_UA.WindowsPhone\PocoFoundationmd.lib;
+				${WIN32_RELEASE}\Util_UA.WindowsPhone\PocoUtilmd.lib;
+				${WIN32_RELEASE}\XML_UA.WindowsPhone\PocoXMLmd.lib;
+			}
+		};
+		
+		[arm,v120,debug,phone] 
+		{
+			lib:
+			{
+				${ARM_DEBUG}\Foundation_UA.WindowsPhone\PocoFoundationmdd.lib;
+				${ARM_DEBUG}\Util_UA.WindowsPhone\PocoUtilmdd.lib;
+				${ARM_DEBUG}\XML_UA.WindowsPhone\PocoXMLmdd.lib;
+			}
+		};
+
+		[arm,v120,release,phone] 
+		{
+			lib:
+			{
+				${ARM_RELEASE}\Foundation_UA.WindowsPhone\PocoFoundationmd.lib;
+				${ARM_RELEASE}\Util_UA.WindowsPhone\PocoUtilmd.lib;
+				${ARM_RELEASE}\XML_UA.WindowsPhone\PocoXMLmd.lib;
+			}
+		};	
+	};
+}
