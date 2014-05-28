@@ -1,0 +1,65 @@
+nuget {
+	nuspec {
+		id = freeimage_universal;
+		version : 0.0.0.2;
+		title: FreeImage for WinRT and WP8.1;
+		authors: {Microsoft Open Technologies, Inc.};
+		owners: {Microsoft Open Technologies, Inc.};
+		licenseUrl: "http://freeimage.sourceforge.net/license.html";
+		projectUrl: "https://github.com/MSOpenTech/graphics-dependencies/tree/master/universal-app-8.1/FreeImage";
+		iconUrl: "https://secure.gravatar.com/avatar/75752e740f4383e6f3eda0767789a815?s=32&r=g&d=retro";
+		requireLicenseAcceptance:false;
+		summary: FreeImage for WinRT and WP8.1;
+		
+		// if you need to span several lines you can prefix a string with an @ symbol (exactly like c# does).
+		description: @"FreeImage for WinRT and WP8.1";
+		releaseNotes: "FreeImage for WinRT and WP8.1";
+		copyright: "Copyright Microsoft Open Technologies, Inc";
+		tags: { native, freeimage, universal, WinRT, WP8, WP8.1 };
+	};
+
+	// the files that go into the content folders
+	files {
+	
+		#defines 
+		{
+			WIN32_DEBUG	=  ..\Debug;
+			WIN32_RELEASE	=  ..\Release;
+			ARM_DEBUG	=  ..\ARM\Debug;
+			ARM_RELEASE	=  ..\ARM\Release;
+			INCLUDE	=  ..\FreeImage\Dist;
+		}
+	
+		include: 
+		{ 
+			".\${INCLUDE}\FreeImage.h";
+		}
+
+		// VS2013 WinRT
+		[x86,v120,debug,winrt] 
+		{
+			lib:${WIN32_DEBUG}\FreeImage.Windows\FreeImage.lib;
+			symbols:${WIN32_DEBUG}\FreeImage.Windows\FreeImage.pdb;
+			bin:${WIN32_DEBUG}\FreeImage.Windows\FreeImage.dll;
+		};
+
+		[x86,v120,release,winrt] 
+		{
+			lib:${WIN32_RELEASE}\FreeImage.Windows\FreeImage.lib;
+			bin: ${WIN32_RELEASE}\FreeImage.Windows\FreeImage.dll;
+		};
+		
+		[arm,v120,debug,winrt] 
+		{
+			lib:${ARM_DEBUG}\FreeImage.Windows\FreeImage.lib;
+			symbols:${ARM_DEBUG}\FreeImage.Windows\FreeImage.pdb;
+			bin:${ARM_DEBUG}\FreeImage.Windows\FreeImage.dll;
+		};
+
+		[arm,v120,release,winrt] 
+		{
+			lib:${ARM_RELEASE}\FreeImage.Windows\FreeImage.lib;
+			bin: ${ARM_RELEASE}\FreeImage.Windows\FreeImage.dll;
+		};	
+	};
+}
