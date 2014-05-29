@@ -42,7 +42,7 @@ nuget {
 		{
 			lib:
 			{
-				${WIN32_DEBUG}\rtaudio.WindowsPhone\rtAudioD.lib;
+				${WIN32_DEBUG}\rtaudio.WindowsPhone\rtAudio.lib;
 			}
 		};
 
@@ -58,7 +58,7 @@ nuget {
 		{
 			lib:
 			{
-				${ARM_DEBUG}\rtaudio.WindowsPhone\rtAudioD.lib;
+				${ARM_DEBUG}\rtaudio.WindowsPhone\rtAudio.lib;
 			}
 		};
 
