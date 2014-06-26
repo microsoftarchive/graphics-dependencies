@@ -16,6 +16,8 @@
 
 #pragma once
 
+#define DeviceState int
+
 using namespace Windows::Storage::Streams;
 
 namespace SDKSample
@@ -24,7 +26,7 @@ namespace SDKSample
     {
         // NB: All states >= DeviceStateInitialized will allow some methods
         // to be called successfully on the Audio Client
-        public enum class DeviceState
+        enum DeviceState_
         {
             DeviceStateUnInitialized,
             DeviceStateInError,
@@ -42,7 +44,7 @@ namespace SDKSample
         };
 
         // Class for DeviceStateChanged events
-        public ref class DeviceStateChangedEventArgs sealed
+        ref class DeviceStateChangedEventArgs sealed
         {
         internal:
             DeviceStateChangedEventArgs( DeviceState newState, HRESULT hr) :
@@ -66,14 +68,14 @@ namespace SDKSample
         };
 
         // DeviceStateChanged delegate
-        public delegate void DeviceStateChangedHandler( Platform::Object^ sender, DeviceStateChangedEventArgs^ e );
+        delegate void DeviceStateChangedHandler( Platform::Object^ sender, DeviceStateChangedEventArgs^ e );
 
         // DeviceStateChanged Event
-        public ref class DeviceStateChangedEvent sealed
+        ref class DeviceStateChangedEvent sealed
         {
         public:
             DeviceStateChangedEvent() :
-                m_DeviceState( DeviceState::DeviceStateUnInitialized )
+                m_DeviceState( DeviceStateUnInitialized )
             {};
 
             DeviceState GetState() { return m_DeviceState; };

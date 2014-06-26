@@ -105,7 +105,7 @@ HRESULT WASAPIRenderer::InitializeAudioDeviceAsync(SampleReceivedUserCallback sa
     hr = ActivateAudioInterfaceAsync( m_DeviceIdString->Data(), __uuidof(IAudioClient2), nullptr, this, &asyncOp );
     if (FAILED( hr ))
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateInError, hr, true );
+        m_DeviceStateChanged->SetState( DeviceStateInError, hr, true );
     }
 
     SAFE_RELEASE( asyncOp );
@@ -125,7 +125,7 @@ HRESULT WASAPIRenderer::ActivateCompleted( IActivateAudioInterfaceAsyncOperation
     HRESULT hrActivateResult = S_OK;
     IUnknown *punkAudioInterface = nullptr;
 
-    if (m_DeviceStateChanged->GetState() != DeviceState::DeviceStateUnInitialized)
+    if (m_DeviceStateChanged->GetState() != DeviceStateUnInitialized)
     {
         hr = E_NOT_VALID_STATE;
         goto exit;
@@ -135,7 +135,7 @@ HRESULT WASAPIRenderer::ActivateCompleted( IActivateAudioInterfaceAsyncOperation
     hr = operation->GetActivateResult( &hrActivateResult, &punkAudioInterface );
     if (SUCCEEDED( hr ) && SUCCEEDED( hrActivateResult ))
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateActivated, S_OK, false );
+        m_DeviceStateChanged->SetState( DeviceStateActivated, S_OK, false );
 
         // Get the pointer for the Audio Client
         punkAudioInterface->QueryInterface( IID_PPV_ARGS(&m_AudioClient) );
@@ -193,7 +193,7 @@ HRESULT WASAPIRenderer::ActivateCompleted( IActivateAudioInterfaceAsyncOperation
         }
 
         // Everything succeeded
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateInitialized, S_OK, true );
+        m_DeviceStateChanged->SetState( DeviceStateInitialized, S_OK, true );
 
     }
 
@@ -202,7 +202,7 @@ exit:
 
     if (FAILED( hr ))
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateInError, hr, true );
+        m_DeviceStateChanged->SetState( DeviceStateInError, hr, true );
         SAFE_RELEASE( m_AudioClient );
         SAFE_RELEASE( m_AudioRenderClient );
         SAFE_RELEASE( m_SampleReadyAsyncResult );
@@ -259,7 +259,7 @@ UINT32 WASAPIRenderer::GetBufferFramesPerPeriod()
 //
 HRESULT WASAPIRenderer::ConfigureDeviceInternal()
 {
-    if (m_DeviceStateChanged->GetState() != DeviceState::DeviceStateActivated)
+    if (m_DeviceStateChanged->GetState() != DeviceStateActivated)
     {
         return E_NOT_VALID_STATE;
     }
@@ -413,25 +413,25 @@ HRESULT WASAPIRenderer::StartPlaybackAsync()
 
     // We should be stopped if the user stopped playback, or we should be
     // initialzied if this is the first time through getting ready to playback.
-    if((m_DeviceStateChanged->GetState() == DeviceState::DeviceStateStopped) ||
-         (m_DeviceStateChanged->GetState() == DeviceState::DeviceStateInitialized))
+    if((m_DeviceStateChanged->GetState() == DeviceStateStopped) ||
+         (m_DeviceStateChanged->GetState() == DeviceStateInitialized))
     {
         // Setup either ToneGeneration or File Playback
         hr = ConfigureSource();
         if(FAILED(hr))
         {
-            m_DeviceStateChanged->SetState(DeviceState::DeviceStateInError,hr,true);
+            m_DeviceStateChanged->SetState(DeviceStateInError,hr,true);
             return hr;
         }
 
         concurrency::create_task([this]()
         {
             WaitForSingleObjectEx(m_EventHandle,INFINITE,FALSE);
-            m_DeviceStateChanged->SetState(DeviceState::DeviceStateStarting,S_OK,true);
+            m_DeviceStateChanged->SetState(DeviceStateStarting,S_OK,true);
             MFPutWorkItem2(MFASYNC_CALLBACK_QUEUE_MULTITHREADED,0,&m_xStartPlayback,nullptr);
         });
     }
-    else if(m_DeviceStateChanged->GetState() == DeviceState::DeviceStatePaused)
+    else if(m_DeviceStateChanged->GetState() == DeviceStatePaused)
     {
         concurrency::create_task([this]()
         {
@@ -475,14 +475,14 @@ HRESULT WASAPIRenderer::OnStartPlayback( IMFAsyncResult* pResult )
     hr = m_AudioClient->Start();
     if (SUCCEEDED( hr ))
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStatePlaying, S_OK, true );
+        m_DeviceStateChanged->SetState( DeviceStatePlaying, S_OK, true );
         hr = MFPutWaitingWorkItem( m_SampleReadyEvent, 0, m_SampleReadyAsyncResult, &m_SampleReadyKey );
     }
 
 exit:
     if (FAILED( hr ))
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateInError, hr, true );
+        m_DeviceStateChanged->SetState( DeviceStateInError, hr, true );
     }
 
     return S_OK;
@@ -495,14 +495,14 @@ exit:
 //
 HRESULT WASAPIRenderer::StopPlaybackAsync()
 {
-    if ( (m_DeviceStateChanged->GetState() != DeviceState::DeviceStatePlaying) &&
-         (m_DeviceStateChanged->GetState() != DeviceState::DeviceStatePaused) &&
-         (m_DeviceStateChanged->GetState() != DeviceState::DeviceStateInError) )
+    if ( (m_DeviceStateChanged->GetState() != DeviceStatePlaying) &&
+         (m_DeviceStateChanged->GetState() != DeviceStatePaused) &&
+         (m_DeviceStateChanged->GetState() != DeviceStateInError) )
     {
         return E_NOT_VALID_STATE;
     }
 
-    m_DeviceStateChanged->SetState( DeviceState::DeviceStateStopping, S_OK, true );
+    m_DeviceStateChanged->SetState( DeviceStateStopping, S_OK, true );
 
     return MFPutWorkItem2( MFASYNC_CALLBACK_QUEUE_MULTITHREADED, 0, &m_xStopPlayback, nullptr );
 }
@@ -540,7 +540,7 @@ HRESULT WASAPIRenderer::OnStopPlayback( IMFAsyncResult* pResult )
     //    m_MFSource->Shutdown();
     //}
 
-    m_DeviceStateChanged->SetState( DeviceState::DeviceStateStopped, S_OK, true );
+    m_DeviceStateChanged->SetState( DeviceStateStopped, S_OK, true );
     return S_OK;
 }
 
@@ -551,14 +551,14 @@ HRESULT WASAPIRenderer::OnStopPlayback( IMFAsyncResult* pResult )
 //
 HRESULT WASAPIRenderer::PausePlaybackAsync()
 {
-    if ( (m_DeviceStateChanged->GetState() !=  DeviceState::DeviceStatePlaying) &&
-         (m_DeviceStateChanged->GetState() != DeviceState::DeviceStateInError) )
+    if ( (m_DeviceStateChanged->GetState() != DeviceStatePlaying) &&
+         (m_DeviceStateChanged->GetState() != DeviceStateInError) )
     {
         return E_NOT_VALID_STATE;
     }
 
     // Change state to stop automatic queueing of samples
-    m_DeviceStateChanged->SetState( DeviceState::DeviceStatePausing, S_OK, false );
+    m_DeviceStateChanged->SetState( DeviceStatePausing, S_OK, false );
     return MFPutWorkItem2( MFASYNC_CALLBACK_QUEUE_MULTITHREADED, 0, &m_xPausePlayback, nullptr );
 
 }
@@ -571,7 +571,7 @@ HRESULT WASAPIRenderer::PausePlaybackAsync()
 HRESULT WASAPIRenderer::OnPausePlayback( IMFAsyncResult* pResult )
 {
     m_AudioClient->Stop();
-    m_DeviceStateChanged->SetState( DeviceState::DeviceStatePaused, S_OK, true );
+    m_DeviceStateChanged->SetState( DeviceStatePaused, S_OK, true );
     return S_OK;
 }
 
@@ -589,14 +589,14 @@ HRESULT WASAPIRenderer::OnSampleReady( IMFAsyncResult* pResult )
     if (SUCCEEDED( hr ))
     {
         // Re-queue work item for next sample
-        if (m_DeviceStateChanged->GetState() ==  DeviceState::DeviceStatePlaying)
+        if (m_DeviceStateChanged->GetState() ==  DeviceStatePlaying)
         {
             hr = MFPutWaitingWorkItem( m_SampleReadyEvent, 0, m_SampleReadyAsyncResult, &m_SampleReadyKey );
         }
     }
     else
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateInError, hr, true );
+        m_DeviceStateChanged->SetState( DeviceStateInError, hr, true );
     }
 
     return hr;
@@ -657,7 +657,7 @@ HRESULT WASAPIRenderer::OnAudioSampleRequested( Platform::Boolean IsSilence )
         // Even if we cancel a work item, this may still fire due to the async
         // nature of things.  There should be a queued work item already to handle
         // the process of stopping or stopped
-        if (m_DeviceStateChanged->GetState() == DeviceState::DeviceStatePlaying)
+        if (m_DeviceStateChanged->GetState() == DeviceStatePlaying)
         {
             // Fill the buffer with a playback sample
             //if (m_DeviceProps.IsTonePlayback)
@@ -676,7 +676,7 @@ exit:
 
     if (AUDCLNT_E_RESOURCES_INVALIDATED == hr)
     {
-        m_DeviceStateChanged->SetState( DeviceState::DeviceStateUnInitialized, hr, false );
+        m_DeviceStateChanged->SetState( DeviceStateUnInitialized, hr, false );
         SAFE_RELEASE( m_AudioClient );
         SAFE_RELEASE( m_AudioRenderClient );
         SAFE_RELEASE( m_SampleReadyAsyncResult );

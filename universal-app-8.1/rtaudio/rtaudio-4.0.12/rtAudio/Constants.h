@@ -14,7 +14,7 @@
 
 namespace SDKSample
 {
-    public value struct Scenario
+    value struct Scenario
     {
         Platform::String^ Title;
         Platform::String^ ClassName;

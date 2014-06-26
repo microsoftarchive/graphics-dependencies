@@ -23,7 +23,7 @@ namespace SDKSample
     namespace WASAPIAudio
     {
         // Class for PlotDataReady events
-        public ref class PlotDataReadyEventArgs sealed
+        ref class PlotDataReadyEventArgs sealed
         {
         internal:
             PlotDataReadyEventArgs( Platform::Array<int, 1>^ points, UINT32 size ) :
@@ -47,10 +47,10 @@ namespace SDKSample
         };
 
         // PlotDataReady delegate
-        public delegate void PlotDataReadyHandler( Platform::Object^ sender, PlotDataReadyEventArgs^ e );
+        delegate void PlotDataReadyHandler( Platform::Object^ sender, PlotDataReadyEventArgs^ e );
 
         // PlotDataReady Event
-        public ref class PlotDataReadyEvent sealed
+        ref class PlotDataReadyEvent sealed
         {
         public:
             PlotDataReadyEvent() {};

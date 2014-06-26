@@ -28,7 +28,7 @@ namespace SDKSample
         /// </list>
         /// </summary>
         [Windows::Foundation::Metadata::WebHostHidden]
-        public ref class LayoutAwarePage : Windows::UI::Xaml::Controls::Page
+        ref class LayoutAwarePage : Windows::UI::Xaml::Controls::Page
         {
         internal:
             LayoutAwarePage();
