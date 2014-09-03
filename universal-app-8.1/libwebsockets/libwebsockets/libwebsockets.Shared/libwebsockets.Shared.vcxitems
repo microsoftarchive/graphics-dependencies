@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{c052bd86-fdd4-4dd3-8169-59c71dabdb40}</ItemsProjectGuid>
+    <ItemsRootNamespace>libwebsockets</ItemsRootNamespace>
+    <ItemsProjectName>libwebsockets.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\extension-deflate-frame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\extension-deflate-stream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\libwebsockets.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\private-libwebsockets.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\win32port\win32helpers\gettimeofday.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\win32port\win32helpers\websock-w32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\base64-decode.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\client-handshake.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\client-parser.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\client.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\extension-deflate-frame.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\extension-deflate-stream.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\extension.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\handshake.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\libwebsockets.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\output.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\parsers.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\server-handshake.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\server.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\sha-1.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\win32port\win32helpers\gettimeofday.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\win32port\win32helpers\websock-w32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+</Project>
