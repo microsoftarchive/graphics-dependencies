@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chipmunk", "chipmunk", "{BE3A22E8-0C81-4F54-9D72-5B6B540691EA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chipmunk.Shared", "chipmunk\chipmunk.Shared\chipmunk.Shared.vcxitems", "{6A63C8A3-B87D-4CCA-BA2E-FAA324649736}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chipmunk.Windows", "chipmunk\chipmunk.Windows\chipmunk.Windows.vcxproj", "{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chipmunk.WindowsPhone", "chipmunk\chipmunk.WindowsPhone\chipmunk.WindowsPhone.vcxproj", "{654A21F9-58CD-494F-9022-C353F0C54C0F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		chipmunk\chipmunk.Shared\chipmunk.Shared.vcxitems*{8c2e77cb-0ace-49c6-90ac-19e081e8b355}*SharedItemsImports = 4
+		chipmunk\chipmunk.Shared\chipmunk.Shared.vcxitems*{654a21f9-58cd-494f-9022-c353f0c54c0f}*SharedItemsImports = 4
+		chipmunk\chipmunk.Shared\chipmunk.Shared.vcxitems*{6a63c8a3-b87d-4cca-ba2e-faa324649736}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Debug|ARM.ActiveCfg = Debug|ARM
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Debug|ARM.Build.0 = Debug|ARM
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Debug|Win32.Build.0 = Debug|Win32
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Debug|x64.ActiveCfg = Debug|x64
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Debug|x64.Build.0 = Debug|x64
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Release|ARM.ActiveCfg = Release|ARM
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Release|ARM.Build.0 = Release|ARM
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Release|Win32.ActiveCfg = Release|Win32
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Release|Win32.Build.0 = Release|Win32
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Release|x64.ActiveCfg = Release|x64
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355}.Release|x64.Build.0 = Release|x64
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Debug|ARM.Build.0 = Debug|ARM
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Debug|Win32.Build.0 = Debug|Win32
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Debug|x64.ActiveCfg = Debug|Win32
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|ARM.ActiveCfg = Release|ARM
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|ARM.Build.0 = Release|ARM
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|Win32.ActiveCfg = Release|Win32
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|Win32.Build.0 = Release|Win32
+		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A63C8A3-B87D-4CCA-BA2E-FAA324649736} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
+		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
+		{654A21F9-58CD-494F-9022-C353F0C54C0F} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
+	EndGlobalSection
+EndGlobal
