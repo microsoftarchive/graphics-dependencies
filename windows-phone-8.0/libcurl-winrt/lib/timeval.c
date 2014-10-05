@@ -22,9 +22,10 @@
 
 #include "timeval.h"
 
-
+#ifdef WINAPI_FAMILY_PARTITION
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) 
 #include <Windows.h>
+#endif
 #endif
 
 typedef ULONGLONG(WINAPI *PtrGetTickCount64)(void);
@@ -58,6 +59,7 @@ struct timeval curlx_tvnow(void)
   ** increases monotonically and wraps once 49.7 days have elapsed.
   */
   struct timeval now;
+
 
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) 
   resolvetc64();

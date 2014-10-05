@@ -709,9 +709,11 @@ int netware_init(void);
 #define S_ISDIR(m) (((m) & S_IFMT) == S_IFDIR)
 #endif
 
+#ifdef WINAPI_FAMILY_PARTITION
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) 
 #include <Synchapi.h>
 #include <Winbase.h>
+#endif
 #endif
 
 #endif /* HEADER_CURL_SETUP_H */
