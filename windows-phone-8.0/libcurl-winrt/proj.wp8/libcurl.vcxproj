@@ -271,7 +271,7 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FCDE7077-ADA0-4CA1-A84D-8E0B0F10CF29}</ProjectGuid>
+    <ProjectGuid>{BF4854E9-C02B-49FE-B9DD-D6373D3BB0EF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>libcurl</ProjectName>
     <RootNamespace>libcurl</RootNamespace>
