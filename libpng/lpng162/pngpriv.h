@@ -380,9 +380,13 @@
  * functions that are passed far data must be model-independent.
  */
 
+
+
 /* Memory model/platform independent fns */
 #ifndef PNG_ABORT
-#  ifdef _WINDOWS_
+#  if defined(WINRT)
+#    define PNG_ABORT()
+#  elif defined(_WINDOWS_)
 #    define PNG_ABORT() ExitProcess(0)
 #  else
 #    define PNG_ABORT() abort()
