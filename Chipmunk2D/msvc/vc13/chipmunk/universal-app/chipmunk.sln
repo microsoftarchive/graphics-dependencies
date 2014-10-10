@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chipmunk.Windows", "chipmun
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chipmunk.WindowsPhone", "chipmunk\chipmunk.WindowsPhone\chipmunk.WindowsPhone.vcxproj", "{654A21F9-58CD-494F-9022-C353F0C54C0F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chipmunk.WP8", "chipmunk.WP8\chipmunk.WP8.vcxproj", "{CF95D892-732E-42D1-BD36-0C927370CE78}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		chipmunk\chipmunk.Shared\chipmunk.Shared.vcxitems*{8c2e77cb-0ace-49c6-90ac-19e081e8b355}*SharedItemsImports = 4
@@ -48,6 +50,16 @@ Global
 		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|Win32.ActiveCfg = Release|Win32
 		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|Win32.Build.0 = Release|Win32
 		{654A21F9-58CD-494F-9022-C353F0C54C0F}.Release|x64.ActiveCfg = Release|Win32
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Debug|ARM.Build.0 = Debug|ARM
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Debug|Win32.Build.0 = Debug|Win32
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Debug|x64.ActiveCfg = Debug|Win32
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Release|ARM.ActiveCfg = Release|ARM
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Release|ARM.Build.0 = Release|ARM
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Release|Win32.ActiveCfg = Release|Win32
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Release|Win32.Build.0 = Release|Win32
+		{CF95D892-732E-42D1-BD36-0C927370CE78}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,5 +68,6 @@ Global
 		{6A63C8A3-B87D-4CCA-BA2E-FAA324649736} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
 		{8C2E77CB-0ACE-49C6-90AC-19E081E8B355} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
 		{654A21F9-58CD-494F-9022-C353F0C54C0F} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
+		{CF95D892-732E-42D1-BD36-0C927370CE78} = {BE3A22E8-0C81-4F54-9D72-5B6B540691EA}
 	EndGlobalSection
 EndGlobal
