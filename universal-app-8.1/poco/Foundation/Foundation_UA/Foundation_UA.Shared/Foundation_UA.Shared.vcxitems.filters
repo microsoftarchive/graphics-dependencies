@@ -163,6 +163,15 @@
     <Filter Include="Streams\zlib">
       <UniqueIdentifier>{3ed8a452-64ed-496e-ad29-dfa0424b0ef5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Crypt">
+      <UniqueIdentifier>{9d46d5d2-b29b-45c0-a5a2-f0da9e6e1ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypt\Header Files">
+      <UniqueIdentifier>{335a4af9-fad7-4115-b6e4-8c26e5ec7a9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypt\Source Files">
+      <UniqueIdentifier>{2419c523-b520-491c-915a-14faa557b961}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\AbstractCache.h">
@@ -945,6 +954,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\UUIDGenerator.h">
       <Filter>UUID\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DigestEngine.h">
+      <Filter>Crypt\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\MD5Engine.h">
+      <Filter>Crypt\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Ascii.cpp">
@@ -1422,6 +1437,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\VarIterator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Windows1250Encoding.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Windows1251Encoding.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DigestEngine.cpp">
+      <Filter>Crypt\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MD5Engine.cpp">
+      <Filter>Crypt\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\..\src\pocomsg.mc">

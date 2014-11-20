@@ -68,6 +68,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DefaultStrategy.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DeflatingStream.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Delegate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DigestEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DirectoryIterator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DirectoryWatcher.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DynamicFactory.h" />
@@ -135,6 +136,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\LRUCache.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\LRUStrategy.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Manifest.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\MD5Engine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\MemoryPool.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\MemoryStream.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Message.h" />
@@ -310,6 +312,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Debugger.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\deflate.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DeflatingStream.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DigestEngine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DirectoryIterator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DirectoryIteratorStrategy.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DirectoryWatcher.cpp" />
@@ -349,6 +352,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LoggingRegistry.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\LogStream.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Manifest.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MD5Engine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MemoryPool.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MemoryStream.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Message.cpp" />

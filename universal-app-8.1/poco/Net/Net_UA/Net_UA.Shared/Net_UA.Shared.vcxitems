@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{5df66914-c64c-47a8-b63a-dbf76c121805}</ItemsProjectGuid>
+    <ItemsRootNamespace>Net_UA</ItemsRootNamespace>
+    <ItemsProjectName>Net_UA.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\DNS.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HostEntry.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPAuthenticationParams.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPBasicCredentials.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPBufferAllocator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPChunkedStream.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPClientSession.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPCookie.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPCredentials.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPDigestCredentials.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPFixedLengthStream.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPHeaderStream.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPIOStream.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPMessage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPRequest.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPResponse.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPSession.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPStream.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPStreamFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\IPAddress.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\IPAddressImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MediaType.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\MessageHeader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NameValueCollection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Net.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\NetException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Socket.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SocketAddress.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SocketAddressImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SocketImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\StreamSocket.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\StreamSocketImpl.cpp" />
+  </ItemGroup>
+</Project>
