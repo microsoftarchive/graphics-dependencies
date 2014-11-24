@@ -217,7 +217,7 @@ bool ThreadImpl::joinImpl(long milliseconds)
 
 bool ThreadImpl::isRunningImpl() const
 {
-	return !_thread.joinable();
+	return _thread.joinable();
 	//if (_thread)
 	//{
 	//	DWORD ec = 0;
