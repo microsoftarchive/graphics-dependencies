@@ -72,6 +72,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DirectoryIterator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DirectoryWatcher.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\DynamicFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Dynamic\Var.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Dynamic\VarHolder.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Dynamic\VarIterator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Environment.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Environment_WIN32.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Environment_WIN32U.h" />
@@ -390,6 +393,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PriorityNotificationQueue.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Process.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PurgeStrategy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\RandomStream.cpp">
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\RefCountedObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\RegularExpression.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\RotateStrategy.cpp" />

@@ -50,4 +50,38 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\StreamSocket.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\StreamSocketImpl.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\DNS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HostEntry.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPAuthenticationParams.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPBasicCredentials.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPBufferAllocator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPChunkedStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPClientSession.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPCookie.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPCredentials.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPDigestCredentials.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPFixedLengthStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPHeaderStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPIOStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPMessage.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPRequest.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPResponse.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPSession.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPStreamFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\IPAddress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\IPAddressImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\MediaType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\MessageHeader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\NameValueCollection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\Net.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\NetException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\Socket.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SocketAddress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SocketAddressImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SocketImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\StreamSocket.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\StreamSocketImpl.h" />
+  </ItemGroup>
 </Project>

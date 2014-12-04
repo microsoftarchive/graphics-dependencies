@@ -497,5 +497,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\XMLWriter.cpp">
       <Filter>XML\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AttrMap.cpp">
+      <Filter>DOM\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

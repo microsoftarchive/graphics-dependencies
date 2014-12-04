@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crypto_UA", "Crypto_UA", "{2ED10E82-24C3-40CC-BD86-0E2E2195B2EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crypto_UA.Shared", "Crypto_UA\Crypto_UA.Shared\Crypto_UA.Shared.vcxitems", "{16234567-0A25-4468-8DBF-DC46654DF761}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crypto_UA.Windows", "Crypto_UA\Crypto_UA.Windows\Crypto_UA.Windows.vcxproj", "{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crypto_UA.WindowsPhone", "Crypto_UA\Crypto_UA.WindowsPhone\Crypto_UA.WindowsPhone.vcxproj", "{60E7DC1A-C93F-4970-B15B-5E26652089CB}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Crypto_UA\Crypto_UA.Shared\Crypto_UA.Shared.vcxitems*{16234567-0a25-4468-8dbf-dc46654df761}*SharedItemsImports = 9
+		Crypto_UA\Crypto_UA.Shared\Crypto_UA.Shared.vcxitems*{60e7dc1a-c93f-4970-b15b-5e26652089cb}*SharedItemsImports = 4
+		Crypto_UA\Crypto_UA.Shared\Crypto_UA.Shared.vcxitems*{6e0f8edb-019e-4d74-a3a5-7c7f0a99875e}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Debug|ARM.Build.0 = Debug|ARM
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Debug|Win32.Build.0 = Debug|Win32
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Debug|x64.ActiveCfg = Debug|x64
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Debug|x64.Build.0 = Debug|x64
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Release|ARM.ActiveCfg = Release|ARM
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Release|ARM.Build.0 = Release|ARM
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Release|Win32.ActiveCfg = Release|Win32
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Release|Win32.Build.0 = Release|Win32
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Release|x64.ActiveCfg = Release|x64
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E}.Release|x64.Build.0 = Release|x64
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Debug|ARM.ActiveCfg = Debug|ARM
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Debug|ARM.Build.0 = Debug|ARM
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Debug|Win32.Build.0 = Debug|Win32
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Debug|x64.ActiveCfg = Debug|Win32
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Release|ARM.ActiveCfg = Release|ARM
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Release|ARM.Build.0 = Release|ARM
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Release|Win32.ActiveCfg = Release|Win32
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Release|Win32.Build.0 = Release|Win32
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16234567-0A25-4468-8DBF-DC46654DF761} = {2ED10E82-24C3-40CC-BD86-0E2E2195B2EC}
+		{6E0F8EDB-019E-4D74-A3A5-7C7F0A99875E} = {2ED10E82-24C3-40CC-BD86-0E2E2195B2EC}
+		{60E7DC1A-C93F-4970-B15B-5E26652089CB} = {2ED10E82-24C3-40CC-BD86-0E2E2195B2EC}
+	EndGlobalSection
+EndGlobal

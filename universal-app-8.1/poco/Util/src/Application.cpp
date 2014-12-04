@@ -431,7 +431,7 @@ void Application::getApplicationPath(Poco::Path& appPath) const
 			appPath = Path(_workingDirAtLaunch, _command);
 		appPath.makeAbsolute();
 	}
-#elif defined(POCO_OS_FAMILY_WINDOWS)
+#elif defined(POCO_OS_FAMILY_WINDOWS) && !defined(WINRT) // Skip for phone/store apps sandbox
 	#if defined(POCO_WIN32_UTF8) && !defined(POCO_NO_WSTRING)
 		wchar_t path[1024];
 		int n = GetModuleFileNameW(0, path, sizeof(path)/sizeof(wchar_t));

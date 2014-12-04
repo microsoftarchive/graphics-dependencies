@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{b21c9b3b-fde2-44f8-bc0a-b5c46b9f2ca5}</ItemsProjectGuid>
+    <ItemsRootNamespace>NetSSL_UA</ItemsRootNamespace>
+    <ItemsProjectName>NetSSL_OpenSSL_UA.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AcceptCertificateHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\CertificateHandlerFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\CertificateHandlerFactoryMgr.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ConsoleCertificateHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Context.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPSClientSession.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\HTTPSStreamFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\InvalidCertificateHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\KeyConsoleHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\KeyFileHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PrivateKeyFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PrivateKeyFactoryMgr.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PrivateKeyPassphraseHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\RejectCertificateHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SecureSocketImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SecureStreamSocket.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SecureStreamSocketImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Session.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SSLException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\SSLManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Utility.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\VerificationErrorArgs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\X509Certificate.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\AcceptCertificateHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\CertificateHandlerFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\CertificateHandlerFactoryMgr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\ConsoleCertificateHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\Context.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPSClientSession.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\HTTPSStreamFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\InvalidCertificateHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\KeyConsoleHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\KeyFileHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\PrivateKeyFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\PrivateKeyFactoryMgr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\PrivateKeyPassphraseHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\RejectCertificateHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SecureSocketImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SecureStreamSocket.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SecureStreamSocketImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\Session.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SSLException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\SSLManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\Utility.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\VerificationErrorArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\Net\X509Certificate.h" />
+  </ItemGroup>
+</Project>

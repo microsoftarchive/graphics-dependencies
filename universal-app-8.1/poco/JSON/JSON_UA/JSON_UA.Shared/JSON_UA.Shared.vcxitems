@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{494bfe6a-5a08-4157-a8f7-aac76b2ab29a}</ItemsProjectGuid>
+    <ItemsRootNamespace>JSON_UA</ItemsRootNamespace>
+    <ItemsProjectName>JSON_UA.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Array.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Handler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\JSONException.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Object.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ParseHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Parser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\PrintHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Query.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Stringifier.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Template.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\TemplateCache.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Array.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Handler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\JSONException.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Object.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\ParseHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Parser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\PrintHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Query.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Stringifier.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\Template.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\include\Poco\JSON\TemplateCache.h" />
+  </ItemGroup>
+</Project>

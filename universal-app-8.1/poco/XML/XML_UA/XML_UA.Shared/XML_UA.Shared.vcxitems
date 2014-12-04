@@ -107,6 +107,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Attr.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Attributes.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AttributesImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AttrMap.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\CDATASection.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\CharacterData.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ChildNodesList.cpp" />

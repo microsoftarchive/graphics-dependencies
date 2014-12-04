@@ -39,7 +39,9 @@
 #include "Poco/SHA1Engine.h"
 #if defined(POCO_OS_FAMILY_WINDOWS)
 #include "Poco/UnWindows.h"
+#if !defined(WINRT)
 #include <wincrypt.h>
+#endif
 #elif defined(POCO_OS_FAMILY_UNIX)
 #include <fcntl.h>
 #include <unistd.h>
@@ -73,7 +75,11 @@ int RandomBuf::readFromDevice(char* buffer, std::streamsize length)
 	using namespace Windows::Security::Cryptography;
 	using namespace Windows::Security::Cryptography::Core;
 	using namespace Windows::Storage::Streams;
+#if defined(WINRT)
+	SymmetricKeyAlgorithmProvider ^keyProvider = SymmetricKeyAlgorithmProvider::OpenAlgorithm(Core::SymmetricAlgorithmNames::AesCbcPkcs7);
+#else
 	SymmetricKeyAlgorithmProvider ^keyProvider = SymmetricKeyAlgorithmProvider::OpenAlgorithm(Core::SymmetricAlgorithmNames::AesCbc);
+#endif
 	Platform::Array<uint8> ^rtArray = ref new Platform::Array<unsigned char>(reinterpret_cast<uint8*>(buffer), n);
 	IBuffer ^rtBuffer = CryptographicBuffer::CreateFromByteArray(rtArray);
 	CryptographicKey ^key = keyProvider->CreateSymmetricKey(rtBuffer);

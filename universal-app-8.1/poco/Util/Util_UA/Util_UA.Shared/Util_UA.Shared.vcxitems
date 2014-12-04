@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\AbstractConfiguration.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\Application.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ConfigurationMapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\ConfigurationView.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\FilesystemConfiguration.cpp" />
