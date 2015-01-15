@@ -5,6 +5,16 @@ cd libwebsockets
 rm -rf bin
 mkdir bin
 cd bin
+mkdir WindowsPhone_8.0
+cd WindowsPhone_8.0
+mkdir arm
+mkdir win32
+cd arm
+cmake -G"Visual Studio 11 2012 ARM" -DCMAKE_SYSTEM_NAME=WindowsPhone -DCMAKE_SYSTEM_VERSION=8.0 %ARGS% ../../../
+cd ..\
+cd win32
+cmake -G"Visual Studio 11 2012" -DCMAKE_SYSTEM_NAME=WindowsPhone -DCMAKE_SYSTEM_VERSION=8.0  %ARGS%  ../../../
+cd ..\..\
 mkdir WindowsPhone_8.1
 cd WindowsPhone_8.1
 mkdir arm
@@ -59,6 +69,8 @@ echo.
 
 call %VSVARS%
 if %FOUND_VC%==1 (
+msbuild  libwebsockets\bin\WindowsPhone_8.0\win32\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="Win32"
+msbuild  libwebsockets\bin\WindowsPhone_8.0\arm\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="ARM"
 msbuild  libwebsockets\bin\WindowsPhone_8.1\win32\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="Win32"
 msbuild  libwebsockets\bin\WindowsPhone_8.1\arm\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="ARM"
 msbuild  libwebsockets\bin\WindowsStore_8.1\win32\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="Win32"
