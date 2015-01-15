@@ -1,3 +1,4 @@
+@echo off
 set ARGS=--DLWS_WITHOUT_TEST_SERVER:BOOL="1" -DLWS_WITHOUT_TEST_SERVER_EXTPOLL:BOOL="1" -DLWS_WITHOUT_TEST_FRAGGLE:BOOL="1" -DLWS_WITH_SSL:BOOL="0" -DLWS_WITHOUT_TEST_CLIENT:BOOL="1" -DCMAKE_CONFIGURATION_TYPES:STRING="Debug;Release;MinSizeRel;RelWithDebInfo" -DLWS_WITHOUT_TEST_PING:BOOL="1" -DLWS_WITHOUT_TESTAPPS:BOOL="1" 
 
 cd libwebsockets
@@ -58,10 +59,10 @@ echo.
 
 call %VSVARS%
 if %FOUND_VC%==1 (
-msbuild  libwebsockets\bin\WindowsPhone_8.1\win32\libwebsockets.sln /p:Configuration="MinSizeRel"
-msbuild  libwebsockets\bin\WindowsPhone_8.1\arm\libwebsockets.sln /p:Configuration="MinSizeRel"
-msbuild  libwebsockets\bin\WindowsStore_8.1\win32\libwebsockets.sln /p:Configuration="MinSizeRel"
-msbuild  libwebsockets\bin\WindowsStore_8.1\arm\libwebsockets.sln /p:Configuration="MinSizeRel"
+msbuild  libwebsockets\bin\WindowsPhone_8.1\win32\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="Win32"
+msbuild  libwebsockets\bin\WindowsPhone_8.1\arm\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="ARM"
+msbuild  libwebsockets\bin\WindowsStore_8.1\win32\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="Win32"
+msbuild  libwebsockets\bin\WindowsStore_8.1\arm\libwebsockets.sln /p:Configuration="MinSizeRel"  /p:Platform="ARM"
 ) else (
     echo Script error.
     goto ERROR
