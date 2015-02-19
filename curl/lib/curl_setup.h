@@ -257,7 +257,7 @@
 #  ifdef UNICODE
      typedef wchar_t *(*curl_wcsdup_callback)(const wchar_t *str);
 #  endif
-#ifdef WP8
+#if defined(WP8) || defined(WINRT)
 #include "winrt.h"
 #define Sleep(x) WinRT_Sleep(x)
 #endif
