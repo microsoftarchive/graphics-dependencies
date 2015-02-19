@@ -34,6 +34,7 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 ipch/
+cocos2d-x-v3/
 *.opensdf
 
 # Ignore files build by ndk and eclipse
