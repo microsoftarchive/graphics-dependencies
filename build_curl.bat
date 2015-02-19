@@ -3,6 +3,9 @@
 @echo off
 
 cd openssl
+if exist vsout (
+	rmdir /s /q vsout
+)
 call ms\do_vsprojects.bat
 cd ..\
 
@@ -39,21 +42,21 @@ echo.
 
 call %VSVARS%
 if %FOUND_VC%==1 (
-msbuild  openssl\vsout\NT-Phone-8.0-Dll-Unicode\NT-Phone-8.0-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="Win32"
+msbuild  openssl\vsout\NT-Phone-8.0-Dll-Unicode\NT-Phone-8.0-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="Win32" /m
 
-msbuild  openssl\vsout\NT-Phone-8.0-Dll-Unicode\NT-Phone-8.0-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="ARM"
+msbuild  openssl\vsout\NT-Phone-8.0-Dll-Unicode\NT-Phone-8.0-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="ARM" /m
 
-msbuild  openssl\vsout\NT-Phone-8.1-Dll-Unicode\NT-Phone-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="Win32"
+msbuild  openssl\vsout\NT-Phone-8.1-Dll-Unicode\NT-Phone-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="Win32" /m
 
-msbuild  openssl\vsout\NT-Phone-8.1-Dll-Unicode\NT-Phone-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="ARM"
+msbuild  openssl\vsout\NT-Phone-8.1-Dll-Unicode\NT-Phone-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="ARM" /m
 
-msbuild  openssl\vsout\NT-Store-8.1-Dll-Unicode\NT-Store-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="Win32"
+msbuild  openssl\vsout\NT-Store-8.1-Dll-Unicode\NT-Store-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="Win32" /m
 
-msbuild  openssl\vsout\NT-Store-8.1-Dll-Unicode\NT-Store-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="ARM"
+msbuild  openssl\vsout\NT-Store-8.1-Dll-Unicode\NT-Store-8.1-Dll-Unicode.vcxproj /p:Configuration="Release" /p:Platform="ARM" /m
 
-msbuild  curl\projects\proj.win8.1-universal\libcurl.sln /p:Configuration="Release" /p:Platform="Win32"
+msbuild  curl\projects\proj.win8.1-universal\libcurl.sln /p:Configuration="Release" /p:Platform="Win32" /m
 
-msbuild  curl\projects\proj.win8.1-universal\libcurl.sln /p:Configuration="Release" /p:Platform="ARM"
+msbuild  curl\projects\proj.win8.1-universal\libcurl.sln /p:Configuration="Release" /p:Platform="ARM" /m
 
 
 ) else (
