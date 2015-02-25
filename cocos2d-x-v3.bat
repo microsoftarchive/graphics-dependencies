@@ -53,13 +53,17 @@ echo Copying Windows Phone 8.0 CURL include files...
 xcopy "curl\include\curl" "cocos2d-x-v3\curl\include\%outdir%8\curl\" /iycq
 
 echo Copying Windows Store 8.1 libwebsockets Win32 Release libs...
-set outdir="winrt_8.1"
-xcopy "libwebsockets\bin\WindowsStore_8.1\win32\bin\MinSizeRel\libwebsockets.dll" "cocos2d-x-v3\websockets\prebuilt\%outdir%\win32\" /iycq
-xcopy "libwebsockets\bin\WindowsStore_8.1\win32\lib\MinSizeRel\libwebsockets.lib" "cocos2d-x-v3\websockets\prebuilt\%outdir%\win32\" /iycq
+set installdir="libwebsockets\bin\WindowsStore_8.1\win32\"
+set outdir="cocos2d-x-v3\websockets\prebuilt\winrt_8.1\win32\
+xcopy "installdir\bin\libwebsockets.dll" %outdir% /iycq
+xcopy "installdir\lib\libwebsockets.lib" %outdir% /iycq
 
 echo Copying Windows Store 8.1 libwebsockets ARM Release libs...
-xcopy "libwebsockets\bin\WindowsStore_8.1\arm\bin\MinSizeRel\libwebsockets.dll" "cocos2d-x-v3\websockets\prebuilt\%outdir%\arm\" /iycq
-xcopy "libwebsockets\bin\WindowsStore_8.1\arm\lib\MinSizeRel\libwebsockets.lib" "cocos2d-x-v3\websockets\prebuilt\%outdir%\arm\" /iycq
+set installdir="libwebsockets\bin\WindowsStore_8.1\arm\"
+set outdir="cocos2d-x-v3\websockets\prebuilt\winrt_8.1\arm\
+xcopy "installdir\bin\libwebsockets.dll" %outdir% /iycq
+xcopy "installdir\lib\libwebsockets.lib" %outdir% /iycq
+
 
 echo Copying Windows Store 8.1 libwebsockets include files...
 xcopy "libwebsockets\win32port\win32helpers\getopt.h" "cocos2d-x-v3\websockets\include\%outdir%\win32helpers\" /iycq
@@ -69,13 +73,16 @@ xcopy "libwebsockets\lib\libwebsockets.h" "cocos2d-x-v3\websockets\include\%outd
 xcopy "libwebsockets\lib\private-libwebsockets.h" "cocos2d-x-v3\websockets\include\%outdir%\" /iycq
 
 echo Copying Windows Phone 8.1 libwebsockets Win32 Release libs...
-set outdir="wp_8.1"
-xcopy "libwebsockets\bin\WindowsPhone_8.1\win32\bin\MinSizeRel\libwebsockets.dll" "cocos2d-x-v3\websockets\prebuilt\%outdir%\win32\" /iycq
-xcopy "libwebsockets\bin\WindowsPhone_8.1\win32\lib\MinSizeRel\libwebsockets.lib" "cocos2d-x-v3\websockets\prebuilt\%outdir%\win32\" /iycq
+set installdir="libwebsockets\bin\WindowsPhone_8.1\win32\"
+set outdir="cocos2d-x-v3\websockets\prebuilt\wp_8.1\win32\
+xcopy "installdir\bin\libwebsockets.dll" %outdir% /iycq
+xcopy "installdir\lib\libwebsockets.lib" %outdir% /iycq
 
 echo Copying Windows Phone 8.1 libwebsockets ARM Release libs...
-xcopy "libwebsockets\bin\WindowsPhone_8.1\arm\bin\MinSizeRel\libwebsockets.dll" "cocos2d-x-v3\websockets\prebuilt\%outdir%\arm\" /iycq
-xcopy "libwebsockets\bin\WindowsPhone_8.1\arm\lib\MinSizeRel\libwebsockets.lib" "cocos2d-x-v3\websockets\prebuilt\%outdir%\arm\" /iycq
+set installdir="libwebsockets\bin\WindowsPhone_8.1\arm\"
+set outdir="cocos2d-x-v3\websockets\prebuilt\wp_8.1\arm\
+xcopy "installdir\bin\libwebsockets.dll" %outdir% /iycq
+xcopy "installdir\lib\libwebsockets.lib" %outdir% /iycq
 
 echo Copying Windows Phone 8.1 libwebsockets include files...
 xcopy "libwebsockets\win32port\win32helpers\getopt.h" "cocos2d-x-v3\websockets\include\%outdir%\win32helpers\" /iycq
@@ -85,13 +92,16 @@ xcopy "libwebsockets\lib\libwebsockets.h" "cocos2d-x-v3\websockets\include\%outd
 xcopy "libwebsockets\lib\private-libwebsockets.h" "cocos2d-x-v3\websockets\include\%outdir%\" /iycq
 
 echo Copying Windows Phone 8.0 libwebsockets Win32 Release libs...
-set outdir="wp8"
-xcopy "libwebsockets\bin\WindowsPhone_8.0\win32\bin\MinSizeRel\libwebsockets.dll" "cocos2d-x-v3\websockets\prebuilt\%outdir%\win32\" /iycq
-xcopy "libwebsockets\bin\WindowsPhone_8.0\win32\lib\MinSizeRel\libwebsockets.lib" "cocos2d-x-v3\websockets\prebuilt\%outdir%\win32\" /iycq
+set installdir="libwebsockets\bin\WindowsPhone_8.0\win32\"
+set outdir="cocos2d-x-v3\websockets\prebuilt\wp8\win32\
+xcopy "installdir\bin\libwebsockets.dll" %outdir% /iycq
+xcopy "installdir\lib\libwebsockets.lib" %outdir% /iycq
 
 echo Copying Windows Phone 8.0 libwebsockets ARM Release libs...
-xcopy "libwebsockets\bin\WindowsPhone_8.0\arm\bin\MinSizeRel\libwebsockets.dll" "cocos2d-x-v3\websockets\prebuilt\%outdir%\arm\" /iycq
-xcopy "libwebsockets\bin\WindowsPhone_8.0\arm\lib\MinSizeRel\libwebsockets.lib" "cocos2d-x-v3\websockets\prebuilt\%outdir%\arm\" /iycq
+set installdir="libwebsockets\bin\WindowsPhone_8.0\arm\"
+set outdir="cocos2d-x-v3\websockets\prebuilt\wp8\arm\
+xcopy "installdir\bin\libwebsockets.dll" %outdir% /iycq
+xcopy "installdir\lib\libwebsockets.lib" %outdir% /iycq
 
 echo Copying Windows Phone 8.0 libwebsockets include files...
 xcopy "libwebsockets\win32port\win32helpers\getopt.h" "cocos2d-x-v3\websockets\include\%outdir%\win32helpers\" /iycq
