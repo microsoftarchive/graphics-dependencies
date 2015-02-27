@@ -73,7 +73,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -91,7 +91,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;_UNICODE;UNICODE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -109,7 +109,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -127,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;WP8;WINRT;BUILDING_LIBCURL;_WIN32_WINNT=0x0603;_USRDLL;USE_SSLEAY;CURL_DISABLE_SMTP;CURL_DISABLE_POP3;CURL_DISABLE_LDAP;CURL_DISABLE_TELNET;_WINSOCK_DEPRECATED_NO_WARNINGS;_UNICODE;UNICODE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAsWinRT>false</CompileAsWinRT>
