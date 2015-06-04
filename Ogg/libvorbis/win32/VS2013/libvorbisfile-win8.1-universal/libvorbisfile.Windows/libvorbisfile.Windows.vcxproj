@@ -147,6 +147,8 @@
       <PreprocessorDefinitions>LIBVORBISFILE_EXPORTS;_CRT_SECURE_NO_WARNINGS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\..\libogg\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4244;</DisableSpecificWarnings>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,6 +157,7 @@
       <AdditionalDependencies>libogg.lib;libvorbis.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\$(Platform)\$(Configuration)\libvorbis.Windows;..\..\..\..\..\libogg\win32\VS2013\$(Platform)\$(Configuration)\libogg.Windows;</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>..\..\..\vorbisfile.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration />
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
@@ -180,6 +183,8 @@
       <PreprocessorDefinitions>LIBVORBISFILE_EXPORTS;_CRT_SECURE_NO_WARNINGS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\..\libogg\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4244;</DisableSpecificWarnings>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -188,6 +193,7 @@
       <AdditionalDependencies>libogg.lib;libvorbis.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\$(Platform)\$(Configuration)\libvorbis.Windows;..\..\..\..\..\libogg\win32\VS2013\$(Platform)\$(Configuration)\libogg.Windows;</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>..\..\..\vorbisfile.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration />
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -206,12 +212,15 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>..\..\..\vorbisfile.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration />
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

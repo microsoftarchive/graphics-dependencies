@@ -46,6 +46,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\include\vorbis\vorbisfile.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\backends.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\bitrate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\books\coupled\res_books_51.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\books\coupled\res_books_stereo.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\books\floor\floor_books.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\books\uncoupled\res_books_uncoupled.h" />
@@ -64,8 +65,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\psych_11.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\psych_16.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\psych_44.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\psych_8.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\residue_16.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\residue_44.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\residue_44p51.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\residue_44u.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\residue_8.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_11.h" />
@@ -73,6 +76,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_22.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_32.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_44.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_44p51.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_44u.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_8.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\lib\modes\setup_X.h" />
