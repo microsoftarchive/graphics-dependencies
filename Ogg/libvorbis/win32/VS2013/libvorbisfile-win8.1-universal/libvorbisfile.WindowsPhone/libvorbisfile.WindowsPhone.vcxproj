@@ -94,6 +94,7 @@
       <CompileAsWinRT>false</CompileAsWinRT>
       <PreprocessorDefinitions>LIBVORBISFILE_EXPORTS;_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP;_UITHREADCTXT_SUPPORT=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\..\libogg\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4305;4101;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,7 +111,9 @@
       <CompileAsWinRT>false</CompileAsWinRT>
       <PreprocessorDefinitions>LIBVORBISFILE_EXPORTS;_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP;_UITHREADCTXT_SUPPORT=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\..\libogg\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4244;</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4244;4305;4101;</DisableSpecificWarnings>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +122,7 @@
       <AdditionalDependencies>libogg.lib;libvorbis.lib;WindowsPhoneCore.lib;RuntimeObject.lib;PhoneAppModelHost.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\$(Platform)\$(Configuration)\libvorbis.WindowsPhone;..\..\..\..\..\libogg\win32\VS2013\$(Platform)\$(Configuration)\libogg.WindowsPhone;</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>..\..\..\vorbisfile.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration />
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
@@ -127,6 +131,7 @@
       <CompileAsWinRT>false</CompileAsWinRT>
       <PreprocessorDefinitions>LIBVORBISFILE_EXPORTS;_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP;_UITHREADCTXT_SUPPORT=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\..\libogg\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4305;4101;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +148,9 @@
       <CompileAsWinRT>false</CompileAsWinRT>
       <PreprocessorDefinitions>LIBVORBISFILE_EXPORTS;_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP;_UITHREADCTXT_SUPPORT=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\..\libogg\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4244;</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4244;4305;4101;</DisableSpecificWarnings>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +159,7 @@
       <AdditionalDependencies>libogg.lib;libvorbis.lib;WindowsPhoneCore.lib;RuntimeObject.lib;PhoneAppModelHost.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\$(Platform)\$(Configuration)\libvorbis.WindowsPhone;..\..\..\..\..\libogg\win32\VS2013\$(Platform)\$(Configuration)\libogg.WindowsPhone;</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>..\..\..\vorbisfile.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration />
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
