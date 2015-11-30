@@ -15,7 +15,6 @@
 #include "pch.h"
 #include "MFSampleGenerator.h"
 
-using namespace SDKSample::WASAPIAudio;
 
 //
 //  MFSampleGenerator()

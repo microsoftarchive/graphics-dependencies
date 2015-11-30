@@ -5,8 +5,6 @@
 #include <collection.h>
 #include <algorithm>
 
-using namespace SDKSample::Common;
-
 using namespace Concurrency;
 using namespace Platform;
 using namespace Platform::Collections;

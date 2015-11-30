@@ -15,8 +15,6 @@
 #include "pch.h"
 #include "ToneSampleGenerator.h"
 
-using namespace SDKSample::WASAPIAudio;
-
 const int TONE_DURATION_SEC = 30;
 const double TONE_AMPLITUDE = 0.5;     // Scalar value, should be between 0.0 - 1.0
 

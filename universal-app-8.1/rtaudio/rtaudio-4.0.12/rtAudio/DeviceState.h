@@ -12,7 +12,6 @@
 // devicestate.h
 //
 
-//#include "MainPage.xaml.h"
 
 #pragma once
 
@@ -20,85 +19,79 @@
 
 using namespace Windows::Storage::Streams;
 
-namespace SDKSample
-{
-    namespace WASAPIAudio
+    // NB: All states >= DeviceStateInitialized will allow some methods
+    // to be called successfully on the Audio Client
+    enum DeviceState_
     {
-        // NB: All states >= DeviceStateInitialized will allow some methods
-        // to be called successfully on the Audio Client
-        enum DeviceState_
+        DeviceStateUnInitialized,
+        DeviceStateInError,
+        DeviceStateDiscontinuity,
+        DeviceStateFlushing,
+        DeviceStateActivated,
+        DeviceStateInitialized,
+        DeviceStateStarting,
+        DeviceStatePlaying,
+        DeviceStateCapturing,
+        DeviceStatePausing,
+        DeviceStatePaused,
+        DeviceStateStopping,
+        DeviceStateStopped
+    };
+
+    // Class for DeviceStateChanged events
+    ref class DeviceStateChangedEventArgs sealed
+    {
+    internal:
+        DeviceStateChangedEventArgs( DeviceState newState, HRESULT hr) :
+            m_DeviceState( newState ),
+            m_hr( hr )
+        {};
+
+        property DeviceState State
         {
-            DeviceStateUnInitialized,
-            DeviceStateInError,
-            DeviceStateDiscontinuity,
-            DeviceStateFlushing,
-            DeviceStateActivated,
-            DeviceStateInitialized,
-            DeviceStateStarting,
-            DeviceStatePlaying,
-            DeviceStateCapturing,
-            DeviceStatePausing,
-            DeviceStatePaused,
-            DeviceStateStopping,
-            DeviceStateStopped
+            DeviceState get() { return m_DeviceState; }
         };
 
-        // Class for DeviceStateChanged events
-        ref class DeviceStateChangedEventArgs sealed
+        property int hr
         {
-        internal:
-            DeviceStateChangedEventArgs( DeviceState newState, HRESULT hr) :
-                m_DeviceState( newState ),
-                m_hr( hr )
-            {};
+            int get() { return m_hr; }
+        }
 
-            property DeviceState State
+    private:
+        DeviceState      m_DeviceState;
+        HRESULT          m_hr;
+    };
+
+    // DeviceStateChanged delegate
+    delegate void DeviceStateChangedHandler( Platform::Object^ sender, DeviceStateChangedEventArgs^ e );
+
+    // DeviceStateChanged Event
+    ref class DeviceStateChangedEvent sealed
+    {
+    public:
+        DeviceStateChangedEvent() :
+            m_DeviceState( DeviceStateUnInitialized )
+        {};
+
+        DeviceState GetState() { return m_DeviceState; };
+
+    internal:
+        void SetState( DeviceState newState, HRESULT hr, Platform::Boolean FireEvent ) {
+            if (m_DeviceState != newState)
             {
-                DeviceState get() { return m_DeviceState; }
-            };
+                m_DeviceState = newState;
 
-            property int hr
-            {
-                int get() { return m_hr; }
-            }
-
-        private:
-            DeviceState      m_DeviceState;
-            HRESULT          m_hr;
-        };
-
-        // DeviceStateChanged delegate
-        delegate void DeviceStateChangedHandler( Platform::Object^ sender, DeviceStateChangedEventArgs^ e );
-
-        // DeviceStateChanged Event
-        ref class DeviceStateChangedEvent sealed
-        {
-        public:
-            DeviceStateChangedEvent() :
-                m_DeviceState( DeviceStateUnInitialized )
-            {};
-
-            DeviceState GetState() { return m_DeviceState; };
-
-        internal:
-            void SetState( DeviceState newState, HRESULT hr, Platform::Boolean FireEvent ) {
-                if (m_DeviceState != newState)
+                if (FireEvent)
                 {
-                    m_DeviceState = newState;
-
-                    if (FireEvent)
-                    {
-                        DeviceStateChangedEventArgs^ e = ref new DeviceStateChangedEventArgs( m_DeviceState, hr );
-                        StateChangedEvent( this, e );
-                    }
+                    DeviceStateChangedEventArgs^ e = ref new DeviceStateChangedEventArgs( m_DeviceState, hr );
+                    StateChangedEvent( this, e );
                 }
-            };
-
-        public:
-            static event DeviceStateChangedHandler^    StateChangedEvent;
-
-        private:
-            DeviceState     m_DeviceState;
+            }
         };
-    }
-}
+
+    public:
+        static event DeviceStateChangedHandler^    StateChangedEvent;
+
+    private:
+        DeviceState     m_DeviceState;
+    };

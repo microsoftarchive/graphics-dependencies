@@ -940,7 +940,6 @@ public:
 #include "WASAPICapture.h"
 #include <thread>
 
-using namespace SDKSample::WASAPIAudio;
 
 class RtApiWinrt : public RtApi
 {

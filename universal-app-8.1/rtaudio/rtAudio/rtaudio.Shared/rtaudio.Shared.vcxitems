@@ -18,7 +18,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\RtAudio.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\LayoutAwarePage.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\suspensionmanager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\Constants.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\MFSampleGenerator.cpp" />
@@ -32,7 +31,6 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\RtAudio.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\Common.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\LayoutAwarePage.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\common\suspensionmanager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\Constants.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\rtaudio-4.0.12\rtAudio\DeviceState.h" />

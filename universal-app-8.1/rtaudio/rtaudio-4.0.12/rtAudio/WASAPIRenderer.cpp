@@ -16,7 +16,6 @@
 #include "WASAPIRenderer.h"
 
 using namespace Windows::System::Threading;
-using namespace SDKSample::WASAPIAudio;
 
 //
 //  WASAPIRenderer()

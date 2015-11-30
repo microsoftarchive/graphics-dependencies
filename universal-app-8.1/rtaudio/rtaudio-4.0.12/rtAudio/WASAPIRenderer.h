@@ -29,89 +29,84 @@ using namespace Windows::Storage::Streams;
 
 #pragma once
 
-namespace SDKSample
+
+typedef void(*SampleReceivedUserCallback)(void *userData, BYTE *audioData, unsigned frames, unsigned bufferSize, bool recording);
+
+// User Configurable Arguments for Scenario
+struct DEVICEPROPS
 {
-    namespace WASAPIAudio
-    {
-		typedef void(*SampleReceivedUserCallback)(void *userData, BYTE *audioData, unsigned frames, unsigned bufferSize, bool recording);
+    Platform::Boolean       IsHWOffload;
+    //Platform::Boolean       IsTonePlayback;
+    Platform::Boolean       IsBackground;
+    Platform::Boolean       IsRawSupported;
+    Platform::Boolean       IsRawChosen;
+    REFERENCE_TIME          hnsBufferDuration;
+    DWORD                   Frequency;
+    IRandomAccessStream^    ContentStream;
+};
 
-        // User Configurable Arguments for Scenario
-        struct DEVICEPROPS
-        {
-            Platform::Boolean       IsHWOffload;
-            //Platform::Boolean       IsTonePlayback;
-            Platform::Boolean       IsBackground;
-            Platform::Boolean       IsRawSupported;
-            Platform::Boolean       IsRawChosen;
-            REFERENCE_TIME          hnsBufferDuration;
-            DWORD                   Frequency;
-            IRandomAccessStream^    ContentStream;
-        };
+// Primary WASAPI Renderering Class
+class WASAPIRenderer :
+    public RuntimeClass< RuntimeClassFlags< ClassicCom >, FtmBase, IActivateAudioInterfaceCompletionHandler > 
+{
+public:
+    WASAPIRenderer();
 
-        // Primary WASAPI Renderering Class
-        class WASAPIRenderer :
-            public RuntimeClass< RuntimeClassFlags< ClassicCom >, FtmBase, IActivateAudioInterfaceCompletionHandler > 
-        {
-        public:
-            WASAPIRenderer();
+    HRESULT SetProperties( DEVICEPROPS props );
+    HRESULT InitializeAudioDeviceAsync(SampleReceivedUserCallback sampleReceivedUserCallback, void *userData);
+    HRESULT StartPlaybackAsync();
+    HRESULT StopPlaybackAsync();
+    HRESULT PausePlaybackAsync();
 
-            HRESULT SetProperties( DEVICEPROPS props );
-            HRESULT InitializeAudioDeviceAsync(SampleReceivedUserCallback sampleReceivedUserCallback, void *userData);
-            HRESULT StartPlaybackAsync();
-            HRESULT StopPlaybackAsync();
-            HRESULT PausePlaybackAsync();
+    HRESULT SetVolumeOnSession( UINT32 volume );
+    DeviceStateChangedEvent^ GetDeviceStateEvent() { return m_DeviceStateChanged; };
 
-            HRESULT SetVolumeOnSession( UINT32 volume );
-            DeviceStateChangedEvent^ GetDeviceStateEvent() { return m_DeviceStateChanged; };
+    METHODASYNCCALLBACK( WASAPIRenderer, StartPlayback, OnStartPlayback );
+    METHODASYNCCALLBACK( WASAPIRenderer, StopPlayback, OnStopPlayback );
+    METHODASYNCCALLBACK( WASAPIRenderer, PausePlayback, OnPausePlayback );
+    METHODASYNCCALLBACK( WASAPIRenderer, SampleReady, OnSampleReady );
 
-            METHODASYNCCALLBACK( WASAPIRenderer, StartPlayback, OnStartPlayback );
-            METHODASYNCCALLBACK( WASAPIRenderer, StopPlayback, OnStopPlayback );
-            METHODASYNCCALLBACK( WASAPIRenderer, PausePlayback, OnPausePlayback );
-            METHODASYNCCALLBACK( WASAPIRenderer, SampleReady, OnSampleReady );
+    // IActivateAudioInterfaceCompletionHandler
+    STDMETHOD(ActivateCompleted)( IActivateAudioInterfaceAsyncOperation *operation );
 
-            // IActivateAudioInterfaceCompletionHandler
-            STDMETHOD(ActivateCompleted)( IActivateAudioInterfaceAsyncOperation *operation );
+private:
+    ~WASAPIRenderer();
 
-        private:
-            ~WASAPIRenderer();
+    HRESULT OnStartPlayback( IMFAsyncResult* pResult );
+    HRESULT OnStopPlayback( IMFAsyncResult* pResult );
+    HRESULT OnPausePlayback( IMFAsyncResult* pResult );
+    HRESULT OnSampleReady( IMFAsyncResult* pResult );
 
-            HRESULT OnStartPlayback( IMFAsyncResult* pResult );
-            HRESULT OnStopPlayback( IMFAsyncResult* pResult );
-            HRESULT OnPausePlayback( IMFAsyncResult* pResult );
-            HRESULT OnSampleReady( IMFAsyncResult* pResult );
+    HRESULT ConfigureDeviceInternal();
+    HRESULT ValidateBufferValue();
+    HRESULT OnAudioSampleRequested( Platform::Boolean IsSilence = false );
+    HRESULT ConfigureSource();
+    UINT32 GetBufferFramesPerPeriod();
 
-            HRESULT ConfigureDeviceInternal();
-            HRESULT ValidateBufferValue();
-            HRESULT OnAudioSampleRequested( Platform::Boolean IsSilence = false );
-            HRESULT ConfigureSource();
-            UINT32 GetBufferFramesPerPeriod();
+    HRESULT GetToneSample( UINT32 FramesAvailable );
+    //HRESULT GetMFSample( UINT32 FramesAvailable );
 
-            HRESULT GetToneSample( UINT32 FramesAvailable );
-            //HRESULT GetMFSample( UINT32 FramesAvailable );
+private:
+    Platform::String^   m_DeviceIdString;
+    UINT32              m_BufferFrames;
+    HANDLE              m_SampleReadyEvent;
+    MFWORKITEM_KEY      m_SampleReadyKey;
+    CRITICAL_SECTION    m_CritSec;
 
-        private:
-            Platform::String^   m_DeviceIdString;
-            UINT32              m_BufferFrames;
-            HANDLE              m_SampleReadyEvent;
-            MFWORKITEM_KEY      m_SampleReadyKey;
-            CRITICAL_SECTION    m_CritSec;
+    WAVEFORMATEX           *m_MixFormat;
+    IAudioClient2          *m_AudioClient;
+    IAudioRenderClient     *m_AudioRenderClient;
+    IMFAsyncResult         *m_SampleReadyAsyncResult;
 
-            WAVEFORMATEX           *m_MixFormat;
-            IAudioClient2          *m_AudioClient;
-            IAudioRenderClient     *m_AudioRenderClient;
-            IMFAsyncResult         *m_SampleReadyAsyncResult;
+    DeviceStateChangedEvent^       m_DeviceStateChanged;
+    DEVICEPROPS                    m_DeviceProps;
 
-            DeviceStateChangedEvent^       m_DeviceStateChanged;
-            DEVICEPROPS                    m_DeviceProps;
+    ToneSampleGenerator    *m_ToneSource;
+    //MFSampleGenerator      *m_MFSource;
 
-            ToneSampleGenerator    *m_ToneSource;
-            //MFSampleGenerator      *m_MFSource;
-
-			HANDLE m_EventHandle;
+	HANDLE m_EventHandle;
 			
-            SampleReceivedUserCallback m_sampleReceivedUserCallback;
-            void *m_userData;
-        };
-    }
-}
+    SampleReceivedUserCallback m_sampleReceivedUserCallback;
+    void *m_userData;
+};
 

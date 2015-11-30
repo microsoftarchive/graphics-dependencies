@@ -22,31 +22,25 @@
 
 template<typename T> T Convert(double Value);
 
-namespace SDKSample
+class ToneSampleGenerator
 {
-    namespace WASAPIAudio
-    {
-        class ToneSampleGenerator
-        {
-        public:
-            ToneSampleGenerator();
-            ~ToneSampleGenerator();
+public:
+    ToneSampleGenerator();
+    ~ToneSampleGenerator();
     
-            Platform::Boolean IsEOF(){ return (m_SampleQueue == nullptr); };
-            UINT32 GetBufferLength(){ return ( m_SampleQueue != nullptr ? m_SampleQueue->BufferSize : 0 ); };
-            void Flush();
+    Platform::Boolean IsEOF(){ return (m_SampleQueue == nullptr); };
+    UINT32 GetBufferLength(){ return ( m_SampleQueue != nullptr ? m_SampleQueue->BufferSize : 0 ); };
+    void Flush();
 
-            HRESULT GenerateSampleBuffer( DWORD Frequency, UINT32 FramesPerPeriod, WAVEFORMATEX *wfx );
-            HRESULT FillSampleBuffer( UINT32 BytesToRead, BYTE *Data );
+    HRESULT GenerateSampleBuffer( DWORD Frequency, UINT32 FramesPerPeriod, WAVEFORMATEX *wfx );
+    HRESULT FillSampleBuffer( UINT32 BytesToRead, BYTE *Data );
 
-        private:
-            template <typename T>
-                void GenerateSineSamples(BYTE *Buffer, size_t BufferLength, DWORD Frequency, WORD ChannelCount, DWORD SamplesPerSecond, double Amplitude, double *InitialTheta);
+private:
+    template <typename T>
+        void GenerateSineSamples(BYTE *Buffer, size_t BufferLength, DWORD Frequency, WORD ChannelCount, DWORD SamplesPerSecond, double Amplitude, double *InitialTheta);
 
-        private:
-            RenderBuffer    *m_SampleQueue;
-            RenderBuffer    **m_SampleQueueTail;
-        };
-    }
-}
+private:
+    RenderBuffer    *m_SampleQueue;
+    RenderBuffer    **m_SampleQueueTail;
+};
 

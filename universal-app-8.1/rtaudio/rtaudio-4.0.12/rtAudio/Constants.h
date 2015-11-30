@@ -12,35 +12,3 @@
 
 #include <collection.h>
 
-namespace SDKSample
-{
-    value struct Scenario
-    {
-        Platform::String^ Title;
-        Platform::String^ ClassName;
-    };
-
-    partial ref class MainPage
-    {
-    public:
-        static property Platform::String^ FEATURE_NAME
-        {
-            Platform::String^ get()
-            {
-                return ref new Platform::String(L"Windows Audio Session API (WASAPI) Sample");
-            }
-        }
-
-        static property Platform::Array<Scenario>^ scenarios
-        {
-            Platform::Array<Scenario>^ get()
-            {
-                return scenariosInner;
-            }
-        }
-    private:
-        static Platform::Array<Scenario>^ scenariosInner;
-    };
-
-
-}
